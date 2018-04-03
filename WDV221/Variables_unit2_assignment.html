@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Variables and Data Types Assignment</title>
+
+
+
+
+
+</head>
+<html>
+<body>
+
+<p>Create a button to promt the user to choose a color.</p>
+
+<button onclick="getColor()">Click Here</button> 
+
+<p id="assignment"></p>
+
+<script>
+								//Assignment 1.creating variables with values 
+	var color1 = "blue";
+	var color2 = "yellow";
+	var color3 = "Orange";
+	var color4 = "green";
+								
+								//Assignment 2. creating a function called getColor() and adding a local variable
+function getColor() {
+    var color5 = prompt("Please enter a color");
+   if (color5 != null) {
+        document.getElementById("assignment").innerHTML =
+        "you chose " + color5 ;
+    }
+}								//Assignment 3. added  prompt() to 									get user input and put it into 									the local variable					
+</script>
+
+<p>Create a function called displayColors() and use the alert() to display all the color variables and their associated variables.</p>
+
+
+
+
+	
+<button onclick="displayColors()">Display Colors</button> 
+								
+<script>
+								//Assignment 4  I first created a button and then created a functioncalled displayColors() and adding an alert to display all the color variables and their associated value.  
+	
+								
+function displayColors() {
+    alert("color1 = " + color1 + " color2 = " + color2 + " color3 = "  + color3 + " color4 = " + color4) ;
+}
+								// Assignment 5 The reason that color5 wouldn't display within the alert box is that we didnt call call the function  and it was a local variable.
+</script>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

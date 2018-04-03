@@ -1,0 +1,291 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Untitled Document</title>
+
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+
+<script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+
+<script src="js/form-validation.js"></script>
+
+<link rel="stylesheet" href="css/style.css"/>
+
+<style>
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+/* Styles */
+
+* {
+
+margin: 0;
+
+padding: 0;
+
+}
+
+body {
+
+font-family: "Open Sans";
+
+font-size: 14px;
+
+}
+
+.container {
+
+width: 500px;
+
+margin: 25px auto;
+
+}
+
+form {
+
+padding: 20px;
+
+background: #606891;
+
+color: #fff;
+
+-moz-border-radius: 4px;
+
+-webkit-border-radius: 4px;
+
+border-radius: 4px;
+
+}
+
+form label,
+
+form input,
+
+form button {
+
+border: 0;
+
+margin-bottom: 3px;
+
+display: block;
+
+width: 100%;
+
+}
+
+form input {
+
+height: 25px;
+
+line-height: 25px;
+
+background: #fff;
+
+color: #000;
+
+padding: 0 6px;
+
+-moz-box-sizing: border-box;
+
+-webkit-box-sizing: border-box;
+
+box-sizing: border-box;
+
+}
+
+form button {
+
+height: 30px;
+
+line-height: 30px;
+
+background: #e67e22;
+
+color: #fff;
+
+margin-top: 10px;
+
+cursor: pointer;
+
+}
+
+form .error {
+
+color: #ff0000;
+
+}
+
+</style>
+
+<script>
+
+$(function() {
+
+// Initialize form validation on the registration form.
+
+// It has the name attribute "registration"
+
+$("form[name='complaintform']").validate({
+
+// Specify validation rules
+
+rules: {
+
+// The key name on the left side is the name attribute
+
+// of an input field. Validation rules are defined
+
+// on the right side
+
+fullname: "required",
+
+phonenumber: "required",
+
+email: {
+
+required: true,
+
+// Specify that email should be validated
+
+// by the built-in "email" rule
+
+email: true
+
+},
+
+custProducts: "required",
+
+custComplaint:{
+
+required: true,
+
+MAX_VALUE: 120
+
+}
+
+},
+
+// Specify validation error messages
+
+messages: {
+
+fullname: "Please enter your full name",
+
+phonenumber: "Please enter your phone number",
+
+custProducts: "Please check at least one button",
+
+custComplaint: "No more than 120 charachters allowed",
+
+email: "Please enter a valid email address"
+
+},
+
+// Make sure the form is submitted to the destination defined
+
+// in the "action" attribute of the form when valid
+
+submitHandler: function(form) {
+
+form.submit();
+
+}
+
+});
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Complaint Form</h2>
+
+<form action="#" name="complaintform">
+
+<label for="fullname">Full Name</label>
+
+<input type="text" name="fullname" id="fullname" placeholder="John Doe"/>
+
+<label for="phonenumber">Phone Number</label>
+
+<input type="tel" name="phonenumber" id="lastnphonenumber" placeholder="(555)555-5555"/>
+
+<label for="email">Email</label>
+
+<input type="email" name="email" id="email" placeholder="john@doe.com"/>
+
+</form>
+
+<p>Please Select Product Group:</p>
+
+<p>
+
+<label>
+
+<input type="radio" name="custProducts" value="books" id="custProducts_0" />
+
+Books</label>
+
+<br />
+
+<label>
+
+<input type="radio" name="custProducts" value="movies" id="custProducts_1" />
+
+Movies</label>
+
+<br />
+
+<label>
+
+<input type="radio" name="custProducts" value="electronics" id="custProducts_2" />
+
+Consumer Electronics</label>
+
+<br />
+
+<label>
+
+<input type="radio" name="custProducts" value="computer" id="custProducts_3" />
+
+Computer</label>
+
+<br />
+
+</p>
+
+<p>Description of problem: (Limit 200 characters)</p>
+
+<p>
+
+<label for="custComplaint"></label>
+
+<textarea name="custComplaint" id="custComplaint" cols="45" rows="5"></textarea>
+
+</p>
+
+<p>
+
+<input type="submit" name="button" id="button" value="File Complaint" />
+
+<input type="reset" name="button2" id="button2" value="Reset" />
+
+</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+	
+	function charachterCount(inValue) //first assignment to create a function that will count the charachter of input
+	{
+		var inValue = prompt('What is your name? ')
+		alert("There are  " + inValue.length + " charachters in your name");
+		
+	}
+	
+	charachterCount("Bobby");
+	
+	//problem 2  concantanate first and last name
+	
+	function printName(firstName, lastName)
+	
+	{
+		document.write("My first name is  " + firstName + "My last name is  " + lastName + " so I am " + firstName + lastName);
+		
+		//document.write(firstName  +" " + lastName); //writing to console
+	}
+	
+	printName("Robert", "McDonell"); //calling the function
+	
+	//problem 3
+	
+	//function returnCharachterCount(person)
+	{
+	//var person = prompt("Please enter a name: ");
+		//var prmt = prompt.toUpperCase();
+	//	alert(person.toUpperCase());
+		//return person.toUpperCase();
+	}//
+	
+	
+	//problem4
+	function uppercaseName()
+	{
+		var person = prompt("Please enter your name: ");
+		//var prmt = prompt.toUpperCase();
+		alert(person.toUpperCase());
+		return person.toUpperCase();
+		
+	}
+
+	 alert(uppercaseName());
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+</head>
+
+<body>
+
+<p>Click the button to trigger a function that will output count in a p e the charachters in your namelement with id="demo".</p>
+
+<button onclick="returnCharachterCount()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function returnCharachterCount() {
+	var string = prompt("What is your name? ")
+    document.getElementById("demo").innerHTML = string;
+}
+</script>
+
+</body>
+</html>

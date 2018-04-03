@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* created by Robert mcDonell, June 20, 2017 */
+
+  body{
+		  background-color: darkslategray;
+		  background-image: url(images/grey_texture.jpg);
+		  color: white;
+		  font-size: 1.1em;
+		  font-family: Veranda, sands-serif; 
+	  }
+		 
+		 /* headings*/
+		 
+		 h1{
+			 background-color: black;
+			 margin: 0 0 0 10px;
+			 padding: 4px;
+			 text-align: center;
+		 }
+		 
+		 h2{
+			 background-color: gray;
+			 margin: 10px 0 0 10px;
+			 text-align: center;
+		 }
+		 
+		 h3{
+			 border-bottom: solid thick darkkhaki;
+			 padding-bottom: 0.5em;
+		 }
+		 
+		 h4{
+			 background-image: url(images/green_linen.jpg);
+			 background-color: yellow;
+			 display: inline;
+			 padding: 4px;
+			 color: black;
+			 
+		 }
+		 
+		 footer{
+			 background-image: url(images/green_linen.jpg);
+			 background-color: yellow;
+			 color: black;
+			 padding: 4px;
+			 text-align: center;
+			 font-size: 1.1em;
+			 display: block;
+		 }
+		 
+		 img{
+			 float: left;
+			 margin: 0 10px 10px 0;
+		 }
+		 img.right{
+			 border: double thick black;
+			 float: right;
+			 margin: 10px 0 10px 10px;
+			 
+		 }
+		 .clear{
+			 clear: both;
+		 }
+ /*links*/
+		 a:link{
+			 color: orange;
+			 text-decoration: none;
+		 }
+		 
+		 a:hover{
+			 color: black;
+			 background-color: darkkhaki;
+			 text-decoration: underline;
+		 }
+		 
+		 a:visited{
+			 color: maroon;
+		 }
+		 
+		 

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src="JQUERY ASS/jquery-3.2.1 (1).js">jQuery</script>
+
+	<script>                	
+$('#btnSlideUp').click(function() {
+    $('#slideMe').slideUp('slow');
+});
+$('#btnSlideDown').click(function() {
+    $('#slideMe').slideUp();
+});
+$('#btnSlideToggle').click(function() {
+    $('#slideMe').slideToggle('fast');
+});</script>
+	<style>               	
+div#animateMe {
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: teal;
+}
+                	</style>
+			
+</head>
+
+<body>
+	                	
+<div id="fadeMe">
+    This content will appear and disappear when the div is faded in and out.
+</div>
+<!-- One button for each fading command -->
+<input type="button" id="btnFadeOut" value="Fade Out">
+<input type="button" id="btnFadeIn" value="Fade In">
+	<script>               	
+$('#btnFadeIn').click(function() {
+    $('#fadeMe').fadeIn('slow');
+});
+$('#btnFadeOut').click(function() {
+    $('#fadeMe').fadeOut();
+});
+                	</script>
+	               	
+<div id="slideMe">
+    This content will appear and disappear when the div is slid in and out.
+</div>
+<!-- One button for each slide command -->
+<input type="button" id="btnSlideUp" value="Slide Up">
+<input type="button" id="btnSlideDown" value="Slide Down">
+<input type="button" id="btnSlideToggle" value="Slide Toggle">
+	               	
+<div id="animateMe">
+    Watch me be animated!
+</div>
+<!-- One button for each fading command -->
+<input type="button" id="btnAnimate" value="Animate It">
+<input type="button" id="btnAnimateBack" value="Animate It Back">
+	<script>                	
+$('#btnAnimate').click(function() {
+	$('#animateMe').animate({
+    	'left': '300px',
+        'top': '200px',
+        'border-width': '8px'
+    }, 1000);
+});
+$('#btnAnimateBack').click(function() {
+	$('#animateMe').animate({
+    	'left': '0',
+        'top': '0',
+        'border-width': '1px'
+    }, 1000);
+});
+                	</script>
+                	
+</body>
+</html>

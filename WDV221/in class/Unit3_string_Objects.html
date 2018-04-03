@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unit 3 String object Values</title>
+</head>
+
+<body>
+<script>
+	
+	function charachterCount()
+	{var yourName = prompt(); //stored as an object (array)
+	
+	
+	alert(" yourName has" + yourName.length);
+		
+		document.write(yourName.length);
+		
+		//alert(yourName.length);
+		
+		var nameLength = yourName.length;  //capturing into var
+	}
+	
+	
+	function printName()
+	{
+		var firstName = prompt();
+		var lastName = prompt();
+		
+		document.write(firstName + lastName);
+		
+	}
+	
+	
+	function returnCharachterCount()
+	{
+		
+		var string = prompt();
+		
+		var stringLength = string.lenght;
+		
+		returnCharachterCount;
+		
+		
+		
+		
+	}
+		
+	
+	
+	
+	
+		
+	</script>
+<p>Variable Value: <script>document.write(yourName);</script></p>
+<p>Length of Variable Value: <script>document.write(nameLength.);</script></p>
+<p>Variable Value to UpperCase: <script>document.write(yourName.toUpperCase())</script></p>
+<p>Variable name in lowerCase: <script>document.write(yourName.toLowerCase())</script></p>
+<p>Name with first letter capitalized: <script>document.write(((yourName.charAt(0).toUpperCase()) + yourName.substring(1,yourName.length )))</script></p>
+<script>
+		var firstName = yourName.substr(0,yourName.indexOf(" "));
+		var lastName = yourName.substring(( yourName.indexOf(" ") + 1), yourName.length);  //your name
+		document.write("your name is: " + firstName + " " + lastName);
+		
+		
+			
+			var lastName = yourName.substring(( yourName.indexOf(" ") + 1));
+			
+			
+			document.write("your name is: " + firstName + " " + lastName);
+		
+		
+		</script>
+</body>
+</html>

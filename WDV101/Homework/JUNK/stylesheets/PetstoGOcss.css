@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+	
+	header{
+		
+		background-image: url(images/dog-bone-background.jpg);
+		text-align: center;
+		font-size: 50px;
+		border: solid 2px crimson;
+		color: crimson;
+		text-shadow: 0px 3px 0px #b2a98f,
+					 0px 7px 5px rgba(0,0,0,0.15),
+					 0px 12px 1px rgba(0,0,0,0.1),
+					 0px 17px 17px rgba(0,0,0,1);
+		
+	}
+	
+	header h2{
+		margin: 0;
+		padding: 0;
+			
+		
+	}

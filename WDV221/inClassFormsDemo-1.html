@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<script>
+
+	function showDiscount()
+	{
+		//alert("inside showDiscount()");
+		if( document.getElementById("discountCode").checked)
+		{
+			alert("You qualify for a discount");	
+		}
+		
+	}
+
+
+	function showProduct()
+	{
+		//alert("inside showProduct()");
+			
+		if( document.getElementById("radioPen").checked)
+		{
+			alert("You have selected Pen");	
+		}
+		if( document.getElementById("radioPencil").checked)
+		{
+			alert("You have selected Pencil");	
+		}	
+		if( document.getElementById("radioPaper").checked)
+		{
+			alert("You have selected Paper");	
+		}	
+		
+		/*
+		if( document.getElementById("radioPen").checked)
+		{
+			alert("You have selected Pen");	
+		}
+		else if (document.getElementById("radioPencil").checked) {
+				alert("You have selected Pencil");	
+		}
+		else if (document.getElementById("radioPaper").checked){
+					alert("You have selected Paper");		
+		}
+		*/
+	}
+	
+	
+	function showState()
+	{
+		alert("inside showState()");
+		var stateList = document.getElementById("stateTax");
+		
+		alert(  stateList.options[stateList.selectedIndex].text);	
+	}
+	
+	function showStateTax()
+	{
+		alert("inside showStateTax()");	
+		
+		alert("Your state tax is: " + document.getElementById("stateTax").value );
+	}
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Form Examples - 2</h2>
+<form name="form1" method="post" action="">
+  <p>I qualify for a discount: 
+    <input type="checkbox" name="discountCode" id="discountCode">
+  </p>
+  <p>Select your product:</p>
+  <p>Pen 
+    <input type="radio" name="radio" id="radioPen" value="radioPen">
+  </p>
+  <p>Paper 
+    <input type="radio" name="radio" id="radioPaper" value="radioPaper">
+  </p>
+  <p>Pencil 
+    <input type="radio" name="radio" id="radioPencil" value="radioPencil">
+  </p>
+  <p>&nbsp;</p>
+  <p>Which State do you live in:
+    <select name="stateTax" id="stateTax">
+      <option>Select a State</option>
+      <option value=".06">Iowa</option>
+      <option value=".08">Illinois</option>
+      <option value=".065">Missouri</option>
+    </select>
+  </p>
+  <p>
+    <input type="reset" name="Reset" id="button" value="Reset">
+  </p>
+  <p>
+    <input type="button" name="button2" id="button2" value="Show Discount" onclick="showDiscount()">
+  </p>
+  <p>
+    <input type="button" name="button3" id="button3" value="Show Product" onClick="showProduct()">
+  </p>
+  <p>
+    <input type="button" name="button4" id="button4" value="Show state" onClick="showState()">
+  </p>
+  <p>
+    <input type="button" name="button5" id="button5" value="Show state tax" onClick="showStateTax()">
+  </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

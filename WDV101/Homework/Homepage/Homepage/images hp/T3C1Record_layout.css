@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* T3C2 Record */
+/* Tutorial 3 Case 2 
+    Author: Robert McDonell
+    Date: June 6, 2017 */
+body{
+	font-family: "Veranda";
+	background-color: #c0e59b;
+}
+
+p {
+	text-indent: 5em;
+	line-height: 1.5em;
+}
+
+h1{
+	text-align: center;
+}
+
+h2 {
+		color: navy;
+}
+
+h3 {
+	color: navy;
+	font-weight:900;
+}
+
+h4 {
+	text-transform: uppercase;
+	font-style: italic;
+	color:maroon;
+}

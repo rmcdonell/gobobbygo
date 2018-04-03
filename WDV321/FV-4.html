@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style> 
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid navy;
+    border-radius: 4px;
+}
+		label{
+			color: red;
+		}
+</style>
+	
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+</head>
+
+<body>
+	<h2>WDV321 Advanced Javascript </h2>
+	<h3>Form Validation Project - Complaint Form</h3>
+	<form method="post" action="#">
+	  <p>Please enter the following information in order to process your concerns.</p>
+	 <form id="myform">
+	<p>
+  <label>Name
+    <input type="text" name="date" />
+    </label>
+</p>
+
+<p>
+  <label>Phone Number 
+    <input type="text" name="phone-number" />
+  </label>
+</p>
+<p>Please Select Product Group:</p>
+	  <p>
+	    <label>
+	      <input type="radio" name="custProducts" value="books" id="custProducts_0" />
+	      Books</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="movies" id="custProducts_1" />
+	      Movies</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="electronics" id="custProducts_2" />
+	      Consumer Electronics</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="computer" id="custProducts_3" />
+	      Computer</label>
+	    <br />
+	  </p>
+	  <p>Description of problem:	(Limit 200 characters)</p>
+	  <p>
+  <label for="custComplaint"></label>
+	    <textarea name="custComplaint" id="custComplaint" cols="45" rows="5"></textarea>
+      </p>
+	  <p>
+	    <input type="submit" name="button" id="button" value="File Complaint" />
+	    <input type="reset" name="button2" id="button2" value="Reset" />
+	  </p>
+</form>
+
+</p>
+</body>
+</html>

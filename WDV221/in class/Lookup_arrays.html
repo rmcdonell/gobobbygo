@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<script>
+var products = ["pen", "paper", "pencil"]; //recommended way to write
+var inventory = [0,0,0];
+//var inventory = new Array();
+// var inventory = new Array(); //object oriented way or writing it
+//var list = document.getElementById("productList");
+//*********** Commented the above "list" variable out
+
+function findProduct()
+		{
+		
+		alert("inside findProduct()");
+		var inputProduct = document.getElementById("inName").value;//pulls name from inName and puts into a variable.
+//************* above you had ("inName.value");
+			var indexOfProduct = products.indexOf(inputProduct);
+			
+			
+		if(indexOfProduct >= 0)//looks for product and will return location.
+			
+			
+			{
+				
+				alert("Found " + inputProduct);
+				
+				inventory[indexOfProduct] += parseInt(document.getElementById("inQuantity").value);
+				console.log(inventory);	
+				
+				alert(inventory);
+				
+			}
+			else
+				{
+					alert(inputProduct + "product not listed");
+				}
+		
+		
+		}//end of function
+//look up info on find method on array
+
+/*  
+	 Returns the first thing in the array unless you create a function as a test ie: 
+		var ages = [3, 15, 18, 22, 34]
+		
+		function checkAdult(age) {
+    		return age >= 18;
+			}	
+			
+			ages.find(chedckAdult);
+*/	
+
+//look up info on indexOf() for an array
+
+/*
+ Searches throught the array to find the position of the item ie:
+ 		
+		var fruits = ["Banana", "Orange", "Apple", "Mango"];
+		var a = fruits.indexOf("Apple"); //returns position of 2  (returns a number)
+ 
+*/
+
+//Find a product if you find a match add or subtract from inventory. 
+//What products are available
+//How many
+//How are we going to display it?
+//What are we going to display?
+//Are we adding or subtracting from inventory?
+//<p><button onClick="inputProduct()">Enter</button></p>
+</script>
+
+
+</head>
+
+
+<body>
+	
+<h1>Lookup Array Example</h1>
+	
+  
+	  
+	<p>Enter a Product:<input id="inName" name="products" type="text"/></p>
+	 <p>Enter a Quantity:<input id="inQuantity" name="productQuantity" type="text"/></p>
+ 	<p><button onClick="findProduct()">Find Product</button></p>
+
+			
+	
+    <br>
+	 <select id = "productList">
+				   
+		<script>
+				   for(var x=0; x<products.length; x++)
+				   {
+				   
+				   document.write("<option>" + products[x] + "</option>");
+				   }
+			   
+
+	
+		</script>
+		</select>
+
+</body>
+</html>
+		
+		
+	

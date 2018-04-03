@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Cookie Web</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready( function(){
+
+var cookieCount = ""
+
+var name = "HomeVisitCount=";
+
+var ca = document.cookie.split(';');
+
+for(var i=0;i < ca.length;i++) {
+
+var c = ca[i];
+
+while (c.charAt(0)==' ') {
+
+c = c.substring(1,c.length);
+
+}
+
+if (c.indexOf(name) == 0) {
+
+cookieCount = c.substring(name.length,c.length);
+
+}
+
+}
+
+var now = new Date();
+
+var time = now.getTime();
+
+time += 3600 * 1000;
+
+now.setTime(time);
+
+debugger;
+
+if(cookieCount == "")
+
+document.cookie = "HomeVisitCount=1" + now + "; path=/";
+
+else
+
+document.cookie = "HomeVisitCount=" + cookieCount + now + "; path=/";
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+
+<div class="container-fluid">
+
+<div class="navbar-header">
+
+<a class="navbar-brand" href="#">Cookie</a>
+
+</div>
+
+<ul class="nav navbar-nav">
+
+<li class="active"><a href="#">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<div id="container">
+
+</div>
+
+</body>
+
+</html>

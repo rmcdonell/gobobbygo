@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV321 Advanced Javascript - Dynamic Content and Structure Project</title>
+
+<style>
+	img {
+	align-content: center;
+	width: auto;
+	text-align: center;
+	color: aliceblue;
+	background-color: darkblue;
+}
+
+body{
+background-color: #F5F5F5;
+}
+
+.body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height 100%;
+background-color: #F5F5DC;
+}
+.expand {
+font-size:40%;
+color:#0000FF;
+-webkit-transition-delay: 30s;
+transition-delay: 30s;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+$("#req").click(function() {
+  $("#reqs").toggle();
+});
+
+$("#ing").click(function() {
+  $("#ings").toggle();
+});
+
+$("#ins").click(function() {
+  $("#inss").toggle();
+});
+
+$("#veg").click(function() {
+  $("#meat").toggle();
+  $("#meat2").toggle();
+});
+
+$("#spice").click(function() {
+  $("#spices").toggle();
+});
+
+$("#dairy").click(function() {
+  $("#dairy1").toggle();
+  $("#dairy2").toggle();
+  $("#dairy3").toggle();
+});
+
+$("#serving").change(function () {
+var serv = parseFloat($('#serving').find(":selected").val());
+
+switch(serv) {
+    case 1:
+document.getElementById("i1").innerHTML = "1";
+document.getElementById("i2").innerHTML = "1/2";
+document.getElementById("i3").innerHTML = "1/2";
+document.getElementById("i4").innerHTML = "2";
+document.getElementById("i5").innerHTML = "1/2";
+document.getElementById("i6").innerHTML = "1/2";
+document.getElementById("i7").innerHTML = "1";
+document.getElementById("i8").innerHTML = "1";
+document.getElementById("i9").innerHTML = "1";
+document.getElementById("i10").innerHTML = "1";
+document.getElementById("i11").innerHTML = "1/2";
+document.getElementById("i12").innerHTML = "1/4";
+        break;
+    case 2:
+document.getElementById("i1").innerHTML = "2";
+document.getElementById("i2").innerHTML = "1";
+document.getElementById("i3").innerHTML = "1";
+document.getElementById("i4").innerHTML = "4";
+document.getElementById("i5").innerHTML = "1";
+document.getElementById("i6").innerHTML = "1";
+document.getElementById("i7").innerHTML = "2";
+document.getElementById("i8").innerHTML = "2";
+document.getElementById("i9").innerHTML = "2";
+document.getElementById("i10").innerHTML = "2";
+document.getElementById("i11").innerHTML = "1";
+document.getElementById("i12").innerHTML = "1/2";
+        break;
+    case 3:
+document.getElementById("i1").innerHTML = "4";
+document.getElementById("i2").innerHTML = "2";
+document.getElementById("i3").innerHTML = "2";
+document.getElementById("i4").innerHTML = "8";
+document.getElementById("i5").innerHTML = "2";
+document.getElementById("i6").innerHTML = "2";
+document.getElementById("i7").innerHTML = "4";
+document.getElementById("i8").innerHTML = "4";
+document.getElementById("i9").innerHTML = "4";
+document.getElementById("i10").innerHTML = "4";
+document.getElementById("i11").innerHTML = "2";
+document.getElementById("i12").innerHTML = "1";
+        break;
+}
+
+});
+
+}); // end of doc ready
+
+function colChange(){ //Changes color of expand
+document.getElementById("exp1").style.color = "#F5F5DC";
+document.getElementById("exp2").style.color = "#F5F5DC";
+document.getElementById("exp3").style.color = "#F5F5DC";
+}
+</script>
+
+</head>
+
+<body onload="colChange()">
+<div class="body">
+<header> <p> <img src="../../../../../../xampp/htdocs/WDV321/downloadChili.jpg" height="200" width="700	" /> </p></header>
+<h3 id="req">Grade Stuffs<spam class="expand" id="exp1"> click to expand</span></h3>
+<span id="reqs" style="display: none">
+<p>A company is creating a website featuring a variety of recipes. They would like their recipes to have some dynamic functionality.</p>
+<p>They are asking you to submit an example recipe format for their review.  The following guidelines have been offered.</p>
+<p>The recipe's displayable area should be broken down into three main areas. The heading, ingredient list and preparation instructions.</p>
+<p>The recipe heading should:</p>
+<ul>
+  <li>Display the name of the recipe</li>
+  <li>An image of the product from the recipe</li>
+  <li>The number of servings for the recipe</li>
+  <li>The average preparation/cooking time for the recipe.</li>
+</ul>
+<p>The recipe ingredient list should:</p>
+<ul>
+  <li>Should show when the customer clicks on something show the list.</li>
+  <li>Display a list of ingredients with quantity followed by the ingredient</li>
+  <li>Should allow the customer to change the quantities to half the servings, havling the quantities.</li>
+  <li>Should allow the customer to change the quantities to double the servings by doubling the quantities.</li>
+  <li>The user suggested a set of radio buttons for for half, normal, double but would be interested in seeing alternatives.</li>
+  <li>Be able to close the ingredient</li>
+</ul>
+<p>The preparation instructions should:</p>
+<ul>
+  <li>Show when the customer clicks on something to show the instructions.</li>
+  <li>Make sure any quantity changes are reflected in this area as well.</li>
+  <li>Be able to close the instructions.</li>
+</ul>
+</span>
+<h1>Crockpot Chili</h1>
+<p>Preparation: 25 minutes</p>
+<p>Cooking: 6 hours</p>
+
+
+<div style="float: right">
+<select name="serving" id="serving">
+<option value="1">3 servings</option>
+<option value="2" selected>6 servings</option>
+<option value="3">12 servings</option>
+</select>
+<span style="float: right">
+<input type="checkbox" id="veg">Vegetarian<br>
+<input type="checkbox" id="spice">Spicy<br>
+<input type="checkbox" id="dairy">Dairy Free<br>
+</span>
+</div>
+
+
+<h2 id="ing">Ingredients:<spam class="expand" id="exp2"> click to expand</span></h2>
+<span id="ings" style="display: none">
+<p><span id="i1">2</span> tbsp. cooking oil</p>
+<p><span id="i2">1</span> cup onion</p>
+<p><span id="i3">1</span> cup chopped peppers</p>
+<p><span id="i4">4</span> tbsp. Chili powder</p>
+<p id="spices" style="display: none"><span id="i5">1</span> tsp. Hot chili powder</p>
+<p id="meat"><span id="i6">1</span> lb ground beef or chicken</p>
+<p><span id="i7">2</span> cans Red Beans</p>
+<p><span id="i8">2</span> cans Kidney Beans</p>
+<p><span id="i9">2</span> cans Tomato Puree</p>
+<p><span id="i10">2</span> cans Tomato Sauce</p>
+<p id="dairy1"><span id="i11">1</span> cup shredded cheese</p>
+<p id="dairy2"><span id="i12">1/2</span> cup sour cream</p>
+</span>
+
+
+<h2 id="ins">Instructions:<spam class="expand" id="exp3"> click to expand</span></h2>
+<span id="inss" style="display: none">
+<p>Heat cooking oil in 2 quart skillet.</p>
+<p>Saute onions and peppers for 5 minutes.</p>
+<p>Add spices and stir for 30 seconds.</p>
+<p id="meat2">Add meat and cook until browned. Approximately 15 minutes.</p>
+<p>Pour contents of skillet into 3 quart crock pot.</p>
+<p>Rinse beans and place in crockpot.</p>
+<p>Open and pour Tomato puree and sauce into crock pot.</p>
+<p>Cover crockpot and cook on low for 6 hours. </p>
+<p>Serve into individual bowls <span id="dairy3"> and top with sour cream and cheese</span>.</p>
+</span>
+
+</div>
+
+</body>
+</html>

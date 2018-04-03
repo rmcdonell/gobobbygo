@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*navigation for footer */
+
+footer a:link{
+	
+	color:white;
+	text-decoration: none;
+	
+}
+
+footer a:visited{
+	
+	color:navy;
+	background-color: gray;
+	text-decoration: none;
+	
+}
+
+footer a:hover{
+	
+	text-decoration: underline;
+}
+

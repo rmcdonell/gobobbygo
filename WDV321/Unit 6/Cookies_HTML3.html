@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Cookie Web</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready( function(){
+
+//Below is the jquery script which get the cookie by its name
+
+var cookieCount = "0";
+
+var name = "HomeVisitCont=";
+
+var ca = document.cookie.split(';');
+
+for(var i=0;i < ca.length;i++) {
+
+var c = ca[i];
+
+while (c.charAt(0)==' ') {
+
+c = c.substring(1,c.length);
+
+}
+
+if (c.indexOf(name) == 0) {
+
+cookieCount = c.substring(name.length,c.length);
+
+}
+
+}
+
+//Set the expiry date to 3 days
+
+var expires = new Date();
+
+var time = expires.getTime();
+
+time += 3 * 24 * 60 * 60 * 1000;
+
+expires.setTime(time);
+
+//creates a cookie by setting its value as visited count count
+
+cookieCount = parseInt(cookieCount) + 1;
+
+document.cookie = "HomeVisitCont=" + cookieCount + "; expires=" + expires.toUTCString() + "; path=/";
+
+sessionStorage['prevPageName'] = document.referrer;
+
+var expiryDate = new Date();
+
+expiryDate.setMonth(expiryDate.getMonth() + 6);
+
+$(".btnAuth").click(function () {
+
+document.cookie = "AuthCookie=userExist; expires=" + expiryDate.toUTCString() + "; path=/";
+
+});
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+
+<div class="container-fluid">
+
+<div class="navbar-header">
+
+<a class="navbar-brand" href="#">Cookie</a>
+
+</div>
+
+<ul class="nav navbar-nav">
+
+<li class="active"><a href="#">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<div id="container">
+
+<button class="btnAuth" >Create Authentication</button>
+
+</div>
+
+</body>
+
+</html>
+
+*************************************END**************************
+
+About.html
+
+In this page i have added a function getCookie this will get the cookie value by its name. here i retrieve both the display count cookie and the previous page visit cookie that stored in home page and they get displayed here in this page as a paragraph.
+
+But before displaying the content the authentication cookie will be checked if no authentication cookie set in home page then the page get redirected to home page
+
+if (typeof(authCookie) == "undefined" || authCookie == "")
+
+{
+alert("Authentication not set!");
+window.location = "./home.html"
+}
+else
+{
+$(".content").html("<p>Home page visit count is " + countCookie + " <br/> Previous page that recorded in Home page is " + prevPageCookie + " </p>");
+}

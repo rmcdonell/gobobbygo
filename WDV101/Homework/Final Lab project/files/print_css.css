@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*author: Robert McDonell
+  Date: July 31,2017
+	FINAL PROJECT*/
+
+/*hides elements*/
+
+nav, header {
+	display: none;
+}
+@page {
+	size: 8.5in 11in;
+	margin: 0.5in;
+}
+/*formats page for printing*/
+
+body {
+	color: black;
+	background-color: white;
+	background-image: none;
+	font-size: 12pt;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	line-height: 120%;
+}
+
+a{
+	text-decoration: underline;
+	color: blue;
+}
+
+img{
+	display: none;
+}

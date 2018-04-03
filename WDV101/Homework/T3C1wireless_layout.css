@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+	Layout
+	Author: Robert McDonell
+	Date: June 5, 2017
+*/
+
+/*heading styles*/
+
+h3 {
+		background-color: orange;
+		color: maroon;
+		font-size: 1.3em;
+		text-align: right;
+		text-transform: uppercase;
+		
+	}
+
+em {
+	color: green;
+	font-weight: bold;
+}
+/*body*/
+body {
+	font-size: 1.3em;
+	background-color: #e6e6fa;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	
+}
+ /* paragraph */
+p {
+	color: saddlebrown;
+	line-height: 1.5em;
+	text-indent: 3em;
+	text-emphasis-color: green;
+	font-weight: bold;
+}

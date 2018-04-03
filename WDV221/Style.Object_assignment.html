@@ -1,0 +1,100 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Style Object-CSS Interactions In Class Exercises</title>
+<style type="text/css">
+<!--
+.style1 {color: 'red'}
+-->
+</style>
+
+<script>
+	
+	
+	
+	function colorChanger(inID,inColor)
+	{
+		document.getElementById(inID).style.color = inColor;	
+	}
+	
+	function alignChanger(inID,position)
+	{
+		document.getElementById(inID).style.textAlign = position;	
+	}	
+	
+	function fontChanger(inID,font)
+	{
+		document.getElementById(inID).style.fontFamily = font;	
+	}	
+	
+	function sizeChanger(inID,size)
+	{
+		document.getElementById(inID).style.fontSize = size;			
+	}	
+
+	function visibleChanger(inID,visible)
+	{
+		document.getElementById(inID).style.visibility = visible;	
+	}	
+	
+	function imgSizeChanger(inID,imgSizeH,imgSizeW)
+	{
+		document.getElementById(inID).style.width = imgSizeW;		
+		document.getElementById(inID).style.height = imgSizeH;			
+	}	
+
+	function borderChanger(inID,newBorder)
+	{
+		document.getElementById(inID).style.border = newBorder;	
+	}	
+
+	
+</script>
+
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h3 id="exercise2and3">Style Object - CSS Interactions - In Class Exercises</h3>
+<p>Please modify this page to create the following Dynamic HMTL effects. </p>
+<p id="exercise1" onclick="colorChanger('exercise1', 'red')">1. Click this paragraph to change the font color to red.</p>
+<p onmouseover="alignChanger('exercise2and3','center')">2. Mousever this paragraph to center the H3 element containing &quot;CSS Interactions&quot;.</p>
+<p>3. Click the button to left align the H3 element. </p>
+<p>
+  <label>
+  <input type="button" name="ex3_btn" id="ex3_btn" value="Left" onclick="alignChanger('exercise2and3','left')" />
+  </label>
+</p>
+<p id="exercise4and5" onmouseover="fontChanger('exercise4and5','Impact')" onclick="fontChanger('exercise4and5','initial')">4. Mouseover this paragraph to change the font to a font of you choice. 5. Click on this paragraph to return the font to the default font.</p>
+<p>6. Click on the button to make the word <span id="exercise6and7">SALE</span> font size 24. </p>
+<p>
+  <label>
+  <input type="button" name="ex6_btn" id="ex6_btn" value="Bigger" onclick="sizeChanger('exercise6and7','24pt')"/>
+  </label>
+</p>
+<p>7. Click on the button to return the word to its original size.</p>
+<p>
+  <label>
+    <input type="button" name="ex7_btn" id="ex7_btn" value="Original" onclick="sizeChanger('exercise6and7','initial')"/>
+  </label>
+</p>
+<p id="exercise8" onmouseover="colorChanger('exercise8', 'yellow')">8. Use an eventhandler of your choice on this paragraph to make the paragraph background color yellow. </p>
+<p>9. Use an onclick event to hide the Frog image shown below.</p>
+<p>10. Use the following button to make the Frog image shown below reappear.</p>
+<p>
+  <input type="button" name="ex10_btn" id="ex10_btn" value="Reappear" onclick="visibleChanger('exercise91011and12','visible')"/>
+</p>
+<p>11. Mouseover the Frog image to make its height and width double its original size. </p>
+<p><img id="exercise91011and12" src="frog.jpg" width="100" height="100" onclick="visibleChanger('exercise91011and12', 'hidden'); imgSizeChanger('exercise91011and12', '100px', '100px')" onmouseover="imgSizeChanger('exercise91011and12', '200px', '200px')" /></p>
+<p>12. Use a click event on the Frog image to make it return to original size. </p>
+<p id="exercise13and14" ondblclick="borderChanger('exercise13and14', 'thick solid black')" onclick="borderChanger('exercise13and14', 'initial')">13. Doubleclick on this paragraph to place a border around this paragraph.</p>
+<p>14. Use an event handler of your choice to remove the border from the previous paragraph. </p>
+<p id="exercise15" onmouseover="colorChanger('exercise15', 'green')" onmouseout="colorChanger('exercise15', 'initial')">15. Mouseover this paragraph to turn its background color to green. When you mouseoff the paragraph return it to its normal color. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+ 	
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript - Operators and Textfields Assignment</title>
+
+<style>
+
+body {background-color:#C99;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+
+
+<script>
+	
+	var count = 0;	
+	
+	function getValue1()
+		{
+			
+			//alert("inside getName()"); //test function
+			var x =	document.getElementById("textFieldValue1").value;
+			
+			document.getElementById("displayValue1").value = x;
+			document.getElementById("textFieldValue1").value = "";
+		}
+		function getValue2()
+		{
+			
+			//alert("inside getName()"); //test function
+			var y =	document.getElementById("textFieldValue2").value;
+			
+			document.getElementById("displayValue2").value = y;
+			document.getElementById("textFieldValue2").value = "";
+		}
+	function multiplyNumbers()
+{
+	alert("inside multiplyNumbers()");		//Used for testing to ensure that the function is running
+	
+	var intextFieldValue1 = parseFloat(document.getElementById("textFieldValue1").value);		//GET content entered by the user into the first textfield.  NOTE This is a String
+	alert(getValue1);
+	var intextFieldValue2 =parseFloat( document.getElementById("textFieldValue2").value)S;		//GET content entered by the user into the second textfield
+	
+	var outTotal = ("intextFieldValue1") *("intextFieldValue2");	//Attempt to onvert input values from String into a number
+	
+	document.getElementById("multipliedNumbers").value = outTotal;	//PUT the new value on the form so the user can see the result
+}
+</script>
+
+
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Project 3 - Operators and Textfields - Assignment</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<h3>Instructions</h3>
+<p>Use the form fields for the input values. For each of the following exercises create a function what will be activated by the button.  </p>
+<form name="form1" method="post" action="">
+  <p>Enter a number for value1:
+    <input type="text" name = "textFieldValue1" id = "textFieldValue1"/>
+  </p>
+  <p>Enter a number for value 2:
+    <input type="text" name ="textFieldValue2" id="textFieldValue2" />
+  </p>
+	
+	
+  <p>1.
+    <input type="button" name="textFieldValue1" id="submit" value="Display value1" onClick="getValue1()" />
+    Display the value you entered for value1:
+  <input type="text" name = "displayValue1" id = "displayValue1"/>
+  </p>
+  <p>2.
+    <input type="button" name="textFieldValue2" id="displayTheValue2" value="Display value2" onClick="getValue2()" />
+    Dislplay the value you entered for value2:
+  <input type="text" name = "displayValue2" id = "displayValue2"/>
+  </p>
+  <p>3.
+    <input type="button" name="multiplyDisplay" id="multipliedNumbers" value="Multiply" onClick = "multiplyNumbers()" />
+    Display the value of value1 * value2:
+  <input type="text" name = "multiply"/>
+  </p>
+  <p>4.
+    <input type="submit" value="Add" />
+    Display the results of value1 + value2 in the following textfield.
+  <input type="text"/>
+  </p>
+  <p>5.
+    <input type="submit" value="Increment count" />
+    Use the increment operator to add 1 to count and display the new value of count.
+  <input type="text"/>
+  </p>
+  <p>
+    <input type="reset" name="Reset" id="button" value="Reset">
+  </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Variables and Data Types Assignment</title>
+
+<style>
+
+body {background-color:#FC6;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Variables and Data Types - Variables Assignment</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<h3>For each exercise use a comment line to put the Exercise number within the script. Also place a short description of what the script is doing.</h3>
+<hr />
+<p>1. Define four global variables called color1 through color4. Assign the variables a color.</p>
+<script>
+	
+	var color1 = "blue";
+	var color2 = "yellow";
+	var color3 = "Orange";
+	var color4 = "green";
+	
+	//  #1 assignemt I have just created variables and added value to them
+		</script>
+<p>2. Create a function called getColor( ).    Create a local variable called color5.</p>
+
+<script>
+	
+	function getColor(); //assignment #2 created a 						function
+	{
+		
+		var color5;  //created a variable inside the 			 function(local variable)
+		
+		color5 = prompt("Please enter a color."); // # 3 assignment created alert to ask for a color input from user
+		alert("you entered " + color5);
+		
+	}
+	
+	</script>  
+	
+	<p><input type="button" value="get color"  onClick="getColor()"/> 
+	</p>
+	
+	
+	<script>
+	
+		function displayColors(); // #4 adding function , alert to give var colors and values, finall Im creating a button with an onClick event handeler and assignment five wont work because you arent adding another function that also adds the input of the user.
+		{
+			alert(var color1 = "blue";
+				  var color2 = "yellow";
+				  var color3 = "Orange";
+				  var color4 = "green";)
+		}
+		document.getElementById("demo").addEventListener("click", displayColors());
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = "var color1 = "blue";
+				  var color2 = "yellow";
+				  var color3 = "Orange";
+				  var color4 = "green";";
+		
+	</script>
+
+	<p><input type="button" value="display colors" onClick="displayColors()"/></p> 
+	
+<button onclick="displayColors()">Display Colors</button>
+	
+<p>3. In the getColor( ) use the prompt( ) to ask the user for a color. Store this value in the color5 variable. Use a button with an onclick event handler to activate this function.</p>
+<p>4. Create a function called displayColors( ). Use the alert( ) to display all the color variables and their associated value. Use a button with an onclick event handler to activate this function.</p>
+<p>5. In your comments address why color5 cannot be displayed by the displayColors( ) function. </p>
+</body>
+</html>

@@ -1,0 +1,306 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript Form Processing</title>
+
+<script>
+
+	
+		function	returnTextfield()
+		{
+		//alert("inside returnTextfield()"); //test the function
+		alert(document.getElementById("textfield").value);
+	}
+
+	function	returnTextarea()
+	{
+		//alert("inside returnTextfield()"); //test the function
+		alert(document.getElementById("textarea").value);
+	}	
+
+	function	whatHidden()
+	{
+		//alert("inside returnTextfield()"); //test the function
+		alert(document.getElementById("hiddenField").value);
+	}
+
+	function	setHiddenField()
+	{
+		//alert("inside setHiddenField()"); //test the function
+		document.getElementById("hiddenField").value = "WDV221 Intro Javascript";
+	}
+
+	function	setTextfield()
+	{
+		//alert("inside whatHidden()");	//tests the function
+		document.getElementById("textfield").value = "Mary";
+	}
+
+	function	setTextarea()
+	{
+		//alert("inside setTextfield()");	//tests the function
+		document.getElementById("textarea").value = "Awesome!";
+	}
+
+	function	displaySeat()
+	{
+		//alert("inside displaySeat()");	//tests the function
+		var x = document.getElementById("Button1-0").checked;
+		var y = document.getElementById("Button1-1").checked;
+		var z = document.getElementById("Button1-2").checked;
+		
+		if (x==true) {document.getElementById("displaySeats").value = "Top Floor";}
+		if (y==true) {document.getElementById("displaySeats").value = "Average";}
+		if (z==true) {document.getElementById("displaySeats").value = "Ground Floor";}
+	}
+
+	function	altdisplaySeat()   //alternate way of doing what I did above
+	{
+		if(document.getElementById("Button1-0").checked)
+		{
+			//alert(document.getElementById("Button1-0").value);
+			document.getElementById("displaySeats").value = "Top Floor";
+		}
+		if(document.getElementById("Button1-1").checked)
+		{
+			//alert(document.getElementById("Button1-1").value);
+			document.getElementById("displaySeats").value = "Average";
+		}
+		if(document.getElementById("Button1-2").checked)
+		{
+			//alert(document.getElementById("Button1-2").value);
+			document.getElementById("displaySeats").value = "Ground Floor";
+		}
+	}
+
+	//using nested if statements
+
+
+	function	setSeats()
+	{
+		//alert("inside setSeats()");	//tests the function
+		document.getElementById("Button1-0").checked = true;
+		document.getElementById("displaySeats").value = "Top Floor";
+	}
+
+	function	workPC()
+	{
+		//alert("inside workPC()");	//tests the function
+		document.getElementById("workWithPcs").value = "YES I DO!";
+	}
+
+	function	changeMind()
+	{
+		//alert("inside changeMind()");	//tests the function
+		document.getElementById("checkbox").checked = false;
+		document.getElementById("workWithPcs").value = "NO WAY!";
+	}
+
+	function	whatFile()
+	{
+		//alert("inside whatFile()");	//tests the function
+		myFile = document.getElementById("fileField").value;
+		alert(myFile);
+	}
+
+	function	clearFile()
+	{
+		alert("clear the field already!");
+
+	}
+
+	function	runDropdown()
+	{
+		//alert("inside runDropdown()");	//tests the function
+		var e = document.getElementById("select");
+		var chosenValue = e.options[e.selectedIndex].value;
+		var i = document.getElementById("select").selectedIndex;
+		//alert(chosenValue)
+		document.getElementById("value").value = chosenValue;
+		document.getElementById("index").value = i;
+		var t = document.getElementById("select");
+		var selectedText = t.options[select.selectedIndex].text;
+		document.getElementById("text").value = selectedText;
+	}
+
+	//alternate version of the above from class is below, changed the function name down in the html
+
+	function	altrunDropdown()
+	{
+		//alert("inside altrunDropdown()");     //tests the function
+		var dropDown = document.getElementById("select");	//create a select object and also lets us work with a variable name instead of longer code. 
+		alert("option index" + dropDown.selectedIndex); 
+		alert("selected value" + dropDown.options[dropDown.selectedIndex].value);
+	}
+
+	function	setOption()
+	{
+		//alert("inside setOption()");
+		var dropDown = document.getElementById("select");	//create a select object
+		dropDown.selectedIndex=3   //set to index of 3
+	}
+
+
+
+
+
+
+
+	function	returnSubmitValue()
+	{
+		//alert("inside returnTextfield()"); //test the function
+		alert(document.getElementById("buttonS").value);
+	}
+
+	function	changeSubmitValue()
+	{
+		document.getElementById("buttonS").value = "GO AWAY!";
+	}
+
+	function	returnResetValue()
+	{
+		alert(document.getElementById("button6").value);
+	}
+
+	function 	changeResetValue()
+	{
+		document.getElementById("button6").value = "RESET THE UNIVERSE";
+	}
+
+
+</script>
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Form Processing - Homework</h2>
+<h3>Instructions:</h3>
+<p>Use the following form. For each of the following form elements:</p>
+<ol>
+  <li>Create a function that will display the current value of the element. Use the indicated event  to run the function.</li>
+  <li>Create a function that will set the element to a different value. Use an event of your choice to run this function. </li>
+  <li>For the hidden field create a function that will set it to a value of &quot;WDV221 Intro Javascript&quot;.</li>
+  <li>For the hidden field create a function that will will display its current value. </li>
+  <li>For the Drop Down list create a function that will display the index, value and text of the selected option.</li>
+</ol>
+<p>&nbsp;</p>
+<form name="form1" method="post" action="http://jhgullion.org/wdv341/displayDate.php">
+  <p>
+    <label>Product Number
+      <input type="text" name="textfield" id="textfield">
+    </label>
+   <em onClick="returnTextfield()">Click Event</em>
+   <span>
+   		<input type="button" value="Set Text To Mary" onClick="setTextfield()" >
+   </span>
+   </p>
+   
+   
+  <p>Please let us know how we performed:  </p>
+  <p>
+    <label>
+      <textarea name="textarea" id="textarea"></textarea>
+    </label>
+    <em onClick="returnTextarea()">Click Event</em>
+    <span><input type="button" value="Set text area" onClick="setTextarea()">
+    </span>
+    </p>
+  
+  
+  
+  <p>Choose Your Floor Preference:
+    <em>Change Event</em>
+  <table width="200">
+    <tr>
+      <td><label>
+        <input type="radio" name="RadioGroup1" value="top floor" id="Button1-0" onChange="altdisplaySeat()">
+        High Level</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="RadioGroup1" value="average" id="Button1-1" onChange="altdisplaySeat()">
+        Mid Level</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="RadioGroup1" value="ground level" id="Button1-2" onChange="altdisplaySeat()">
+        Low Level</label></td>
+    </tr>
+  </table>
+  </p>
+  
+  <p>You Choose:<input type="text" name="displaySeats" id="displaySeats">
+  <input type="button" value="Set to Top Floor" onClick="setSeats()"</p>
+ 
+ 
+  <p>Please Check All that Apply: <em>Change Event</em></p>
+  <p>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox" onChange="workPC()">
+      I like working with computers</label>
+  </p>
+ <p>You picked:<input type="text" name="workWithPcs" id="workWithPcs">
+ 	<input type="button" value="Just kidding" onClick="changeMind()"
+    </p>
+ 
+  <p>
+    <label>Image File to Upload
+      <input type="file" name="fileField" id="fileField">
+    </label>
+  <em>Click Event</em></p>
+  	<input type="button" value="What file is choosen?" onClick="whatFile()"> 
+    	<input type="button" value="clear this chosen file" onClick="clearFile()"></p>  
+  
+  <p>
+    There is a hidden field right here: 
+    <input type="hidden" name="hiddenField" id="hiddenField">
+  <em>Click Event 3. and 4.</em></p>
+  <p><input type="button" value="What is the hidden field?" onClick="whatHidden()">
+  	<input type="button" value="push here to display the hidden field!" onClick="setHiddenField()"></p>
+  
+  
+  <p>
+    <label>Please Select Your Favorite Class
+      <select name="select" id="select" onChange="runDropdown()">
+        	<option value="WDV101">HTML</option>
+       		<option value="WDV205">CSS</option>
+        	<option value="WDV151">Web Design</option>
+        	<option value="WDV221">Javascript</option>
+      </select>
+    </label>
+   
+    <em>Change Event. 5.</em>
+    <input type="button" value="Set Javascript" onClick="setOption()"></p>
+    
+    <p>For Your Selection:</p>
+    	<label>Index:
+        	<input type="text" name="index" id="index">
+        </label>
+        
+        <label>Value:
+        	<input type="text" name="value" id="value">
+       </label>
+       
+       <label>Text:
+       		<input type="text" name="text" id="text">
+      </label>
+      
+      <p>Submit
+      	<input type="submit" name="button" id="buttonS" value="Submit">
+    
+Click Event <input type="button" name="button2" id="button2" value="What is the left buttons value?" onClick="returnSubmitValue()">
+			<input type="button" name="button3" id="button3" value="OK how about we change it!" onClick="changeSubmitValue()">
+</p>
+
+  <p>Reset
+    <input type="reset" name="button6" id="button6" value="Reset">
+    <input type="button" name="button4" id="button4" value="What is the value of the button on the left?" onClick="returnResetValue()">
+    <input type="button" name="button8" id="button8" value="Ok lets change that one too!" onClick="changeSubmitValue()">
+  </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

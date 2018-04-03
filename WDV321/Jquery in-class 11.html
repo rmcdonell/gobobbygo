@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV321 Advanced JavaScript JQuery Document</title>
+<script src="JQUERY ASS/jquery-3.2.1 (1).js">jQuery</script>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+<script>$(document).ready(function(){
+	
+			 $( "#firstp" ).css( "color", "Aqua" )
+	});
+</script>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>WDV321 Advanced JavaScript JQuery Document</h1>
+<script>
+	
+	document.write("<h2>JavaScript Example</h2>");// output a heading
+	
+	$("body").append("<h2>JavaScript Example</h2>");
+			</script>
+<p id="firstP">I am trying to use JQuery to change color!!</p>
+
+<button id="Button1">Change Color</button>
+<button id="Button2">Input</button>
+<script>
+	
+$( "#firstP" ).css( "color", "Lime" );
+
+	
+$(function() {
+	$( "#Button1" ).button(); 
+	
+});
+	
+	
+	$( "#Button1" ).click(function() {
+ alert( "Handler for .click() called." );
+		$( "#Button1" ).css( "color", "Red" );
+});
+	
+$(function() {
+	$( "#Button2" ).button(); 
+	$( "#Button1" ).css( "color", "Yellow" );
+});
+	
+</script>
+</body>
+</html>

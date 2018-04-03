@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arrays inClass</title>
+
+
+<h2>Array in Class</h2>
+<script>
+	
+	var names = ["Jeff", "Mary", "Mark"];
+				 
+	var cities = ["Des Moines", "Chicago", "Tokyo"];
+	
+	var population = [380000, 7000000, 21000000];
+	
+	var scores = []; //create an empty array
+	
+	//alert(names);
+	
+	
+	names[3] = "Lisa";  // add to array
+	
+	//alert(names);
+	
+	//names[75] = "Bob";
+
+	
+	//alert(names);
+	
+	//alert(names[1]);
+	
+	//alert(names.length);
+	
+	//loop lookup array
+	
+	
+	function lookupName(inName)   //inName = parameter
+	{
+		
+		alert("inside lookupName()");
+		
+		var foundName = false;  //switch or flag
+		
+		for(var x =0;x < names.length; x++)
+			{
+			if(names[x] == inName)
+				{
+				
+					
+					foundName = true;
+					break; //stops for loop after we find a match
+				}
+											
+			}
+				
+			if(foundName)
+				{
+					alert("Found the name!");
+				}
+				
+			else{
+				alert("Name not Found!");
+				}
+			}
+		
+			
+				
+				
+			//end of for loop
+		
+	  //end of function
+	
+	
+	
+	
+
+	
+	
+	</script>
+
+</head>
+
+<body>
+	
+	<p><button onClick="lookupName('Jill')">Find Jill</button></p>
+	<p><button onClick="lookupName('Mark')">Find Mark</button></p>
+	
+
+	
+	
+</body>
+</html>

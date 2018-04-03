@@ -1,0 +1,132 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV321 Advanced Javascript - Form Validation Project</title>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
+		$('#profileDetailsPage').validate({
+    rules: {
+        firstName:{
+            required: true,
+            textonly: true
+        },
+        address1:{
+            required: false, // don't require this field
+            textonly: true
+        }
+    },
+    messages: {
+        firstname: "Please enter your first name",
+        address1: "Please enter only text"
+    },
+    submitHandler: function() {}
+});</script>
+
+
+
+
+<style>
+
+label	{
+	width:150px;
+	display:inline-block;	
+}
+
+</style>
+	
+</head>
+
+
+<body>
+
+	<h2>WDV321 Advanced Javascript </h2>
+	<h3>Form Validation Project - Complaint Form</h3>
+	<form method="post" action="#">
+	  <p>Please enter the following information in order to process your concerns.</p>
+	 <form id="myform">
+<label for="field">Name: </label>
+<input type="text" class="left" id="field" name="field">
+<br/>
+<input type="submit" value="Validate!">
+</form>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
+// just for the demos, avoids form submit
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#myform" ).validate({
+  rules: {
+    field: {
+      required: true,
+      maxlength: 20
+    }
+  }
+});
+</script>
+	  <p>
+	    <label for="custPhone">Phone Number: </label>
+	    <input type="text" name="custPhone" id="custPhone" />
+	  </p>
+	<p>
+		<!--<label for="custEmail">Email:</label>
+		<input type="email" name="custEmail"
+		id="custEmail" />
+		</p> -->
+		<form method="post" action="#">
+	
+		<p>Email: 
+			<input type="text" name="emailAddress" id="emailAddress"><span></span>
+		</p>
+	
+		<p>
+			<!-- Change this element for validating
+				<input type="submit" value="Submit">
+			-->
+			
+			<input type="button" value="Submit" onclick="validateForm()">
+			
+			<input type="reset" value="Try Again">
+		</p>
+	
+	</form>
+
+	  <p>Please Select Product Group:</p>
+	  <p>
+	    <label>
+	      <input type="radio" name="custProducts" value="books" id="custProducts_0" />
+	      Books</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="movies" id="custProducts_1" />
+	      Movies</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="electronics" id="custProducts_2" />
+	      Consumer Electronics</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="computer" id="custProducts_3" />
+	      Computer</label>
+	    <br />
+	  </p>
+	  <p>Description of problem:	(Limit 200 characters)</p>
+	  <p>
+  <label for="custComplaint"></label>
+	    <textarea name="custComplaint" id="custComplaint" cols="45" rows="5"></textarea>
+      </p>
+	  <p>
+	    <input type="submit" name="button" id="button" value="File Complaint" />
+	    <input type="reset" name="button2" id="button2" value="Reset" />
+	  </p>
+</form>
+	<p>&nbsp;</p>
+</body>
+</html>

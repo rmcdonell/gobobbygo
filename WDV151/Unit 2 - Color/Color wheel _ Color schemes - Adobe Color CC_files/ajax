@@ -1,0 +1,35 @@
+var mboxCurrent = mboxFactories.get('default').get('adobe-global-mbox',0);mboxCurrent.setOffer(new mboxOfferAjax(''));mboxCurrent.getOffer().setOnLoad(function() {
+  function getCookie(c_name) {
+         var i,x,y,ARRcookies = document.cookie.split(";");
+         for (i=0;i<ARRcookies.length;i++) {
+              x = ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+              y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+              x = x.replace(/^\s+|\s+$/g,"");
+              if (x==c_name) {
+                  return unescape(y);
+              }
+          }
+    }
+    function setCookie(c_name,value,exdays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value = escape(value) + ((exdays==null) ? "" : ";expires="+exdate.toUTCString())
+        c_value += ';domain=adobe.com';
+        
+       document.cookie=c_name + "=" + c_value;
+     }
+    function setDomainCookie(c_name,value,exdays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value = escape(value) + ((exdays==null) ? "" : ";expires="+exdate.toUTCString())        
+       document.cookie=c_name + "=" + c_value;
+     }
+try { 
+setCookie("se", "gss", 14);
+setDomainCookie("se", "gss", 14);
+} catch(err) { }
+  
+var testversion = (typeof testversion === 'undefined' ?  ""  : testversion) + 'campaign:CCM0528- Introduce new search engine for Search,experience:Control,'
+/*mboxHighlight+ (1of2) v1 ==> Response Plugin*/
+window.ttMETA=(typeof(window.ttMETA)!='undefined')?window.ttMETA:[];window.ttMETA.push({'mbox':'adobe-global-mbox','campaign':'CCM0528- Introduce new search engine for Search','experience':'Control','offer':'/ccm0528-_introducenewsearchengineforsearch/experiences/0/pages/0/zones/0/1505236351700'});window.ttMBX=function(x){var mbxList=[];for(i=0;i<ttMETA.length;i++){if(ttMETA[i].mbox==x.getName()){mbxList.push(ttMETA[i])}}return mbxList[x.getId()]}
+});mboxCurrent.loaded();

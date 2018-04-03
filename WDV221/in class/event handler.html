@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>event hander</title>
+	<script>
+		function htmlEvent()
+	{
+		
+		alert("You win!");
+	
+		
+	}
+	function javascriptEvent()
+		{
+			alert("javascript is calling");
+			
+		}
+			document.getElementById("eventButton").addEventListener('click', javascriptEvent());
+		
+			
+	</script>
+	</head>
+
+	<body>
+<p>WDV221 Intro JavaScript</p>
+<p> Unit -5 EvENT hANDLERS</p>
+<p>Examples and samples</p>
+<p>
+      <button onClick="htmlEvent()">Click me!</button>
+    </p>
+<p>
+      <button id="eventButton">JavaScript click me!</button>
+    </p>
+</body>
+
+<script>
+		document.getElementById("eventButton").addEventListener('click', javascriptEvent);	</script>
+</html>

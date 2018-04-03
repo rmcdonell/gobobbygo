@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script src="jquery-2.1.4.js"></script>
+
+<script>
+
+$(document).ready(function(e) {
+	
+	var count=1;	//sets a counter to identify the new sendTo name attributes
+	
+	$("#addSender").click(function(){
+		//alert("AddSender Clicked");
+		$("#toRow").append("<br><input type='text' name='sendTo" + count + "' />");
+		count++; 
+	});//end click function
+	
+});//end ready function
+</script>
+
+
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p>
+  	<table border="0">
+    <tr>
+    <td valign="top"><label id="sendLabel">Send To Address</label></td>
+    <td id="toRow"><input type="text" name="sendTo" id="sendTo" /></td> 
+    </tr>
+    </table>
+    <label>Add Sender    
+      <input type="button" name="addSender" id="addSender" value=" + " />
+    </label>
+  </p>
+  <p>
+    <label>From Address
+      <input type="text" name="fromSender" id="fromSender" />
+    </label>
+  </p>
+</form>
+</body>
+</html>

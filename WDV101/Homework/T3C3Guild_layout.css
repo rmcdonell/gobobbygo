@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+a {text-decoration: none;}
+
+em {font-weight: bold;
+	color: green;
+	
+}
+body {
+	font-family: "arial";
+	font-size: 1.5em;
+	background-color: #c19b76;
+	
+}
+
+h1{
+	font-style: italic;
+	font-size: 150%;
+	color:  black;
+	font-family: serif;
+	
+}
+
+h2{
+	color: white;
+	background-color: teal;
+	
+}
+
+h3 {
+	color: white;
+	background-color: teal;
+	
+}
+
+h4 {
+	text-transform: uppercase;
+}
+

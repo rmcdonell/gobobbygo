@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>inclass textbox</title>
+	
+	
+	<script>
+	
+	function getName()
+		{
+			
+			//alert("inside getName()"); //test function
+			var x =	document.getElementById("nameField").value;
+			alert("Your name is:" + x);
+			document.getElementById("displayField").value = x;
+			document.getElementById("nameField").value = "";
+		
+		}
+	
+	
+	
+	</script>
+</head>
+
+<body>
+	<h1>In Class Demo Textfields</h1>
+	
+<p>
+	<label for="textfield" Name:></label>
+	<input type="text" name="nameField" id="nameField">
+	
+	</p>
+<p>
+	<label for="getName">Get Name</label>
+	<input type="button" name="getName" id="getName" value="submit" onClick="getName()">
+	
+	
+	</p>
+	<p>
+	<label for="textfield">Display Name</label>
+	<input type="text" name="displayField" id="displayField">
+	
+	</p>
+
+</body>
+</html>

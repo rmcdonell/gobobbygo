@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html>
+
+<head>
+
+    <!--
+        WDV 341
+        Robert McDonell
+        2/10/2018
+    -->
+
+    <title>PHP Functions</title>
+
+
+</head>
+
+<body>
+
+    <form action="#" method="get">
+        <p>
+            <label for="userDate">Enter a date: </label>
+            <input type="text" name="userDate" id="userDate" value="" placeholder="yyyy/mm/dd">
+        </p>
+
+        <p>Formatted Date:
+            02/13/2018
+            <br> Formatted Date (international):
+
+            13/02/2018        </p>
+
+        <p>
+            <label for="userString">Enter a comment: </label>
+            <input type="text" name="userString" id="userString" placeholder="I go to school at ...">
+        </p>
+
+        <p>
+            Your comment contains 0 characters<br>Your comment was: <br>This comment contains DMACC? False        </p>
+
+        <p>
+            <label for="userNumber1">Enter a number: </label>
+            <input type="text" name="userNumber1" id="userNumber1" value="1234567890">
+        </p>
+
+        <p>
+            Your number is: 0        </p>
+
+        <p>
+            <label for="userNumber2">Enter a number: </label>
+            <input type="text" name="userNumber2" id="userNumber2" value="123456">
+        </p>
+
+        <p>
+            Your number as USD currency is: $0.00        </p>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+
+</body>
+
+</html>

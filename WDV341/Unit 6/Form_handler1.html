@@ -1,0 +1,60 @@
+<html>
+<head>
+   <title>Contact Us</title>
+</head>
+<body>
+<form action="formHandler.php" id="ContactUs" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+function ValidateForm(frm)
+{
+   if (frm.cname.value == "")
+   {
+       alert('Name is required.');
+       frm.cname.focus();
+       return false;
+   }
+   if (frm.cemail.value == "")
+   {
+       alert('Email address is required.');
+       frm.cemail.focus();
+       return false;
+   }
+   if (frm.cemail.value.indexOf("@") < 1 || frm.cemail.value.indexOf(".") < 1)
+   {
+       alert('Please enter a valid email address.');
+       frm.cemail.focus();
+       return false;
+   }
+   if (frm.comments.value == "")
+   {
+       alert('Please enter comments.');
+       frm.comments.focus();
+       return false;
+   }
+return true;
+}
+</script>
+<div align="center">
+   <table>
+       <tr>
+           <td colspan="2" align="center" style="font-size:30px;">Contact Us</td>
+       </tr>
+       <tr>
+           <td>Contact Name</td>
+           <td> <input type="text" name="cname"></td>
+       </tr>
+       <tr>
+           <td>Contact Email</td>
+           <td> <input type="text" name="cemail"></td>
+       </tr>
+       <tr>
+           <td>Comments</td>
+           <td> <textarea name="comments"></textarea> </td>
+       </tr>
+       <tr>
+           <td colspan="2" align="center" ><input type="submit" /></td>
+       </tr>
+   </table>
+</div>
+</body>
+</html>

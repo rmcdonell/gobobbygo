@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Functions 3.2</title>
+<script>
+	
+	
+	function name(inName)
+	
+	{
+		//alert("inside name()"); // test the function
+		
+		consol.log(inName);
+	}
+	
+	
+	function returnName(inName)
+	
+	{
+		alert("inside returnName")
+		return inName; //send name back to where it was called
+	}
+	
+	name("Bobby"); //call the function
+	returnName("Jeff");
+	
+	</script>
+</head>
+
+<body>
+
+
+	<p>Your name is: <script>document.write(returnName("jeff"));</script>and your last name is</p>
+	
+
+</body>
+</html>

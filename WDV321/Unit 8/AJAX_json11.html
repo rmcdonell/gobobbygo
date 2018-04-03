@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create JSON Data</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "demo_test.txt", success: function(result){
+            $("#div1").html(result);
+        }});
+    });
+});
+</script>
+</head>
+<body>
+	
+    <h1>wdv 321 Advanced JavaScript</h1>
+   
+
+<div id="div1"><h2>Create JSON Data</h2></div>
+
+<button>Get External Content</button>
+
+
+
+    <h1>wdv 321 Advanced JavaScript</h1>
+    <h2>Create JSON Data</h2>
+    <section class="StudentID">
+       
+       
+        <h3>Given the attached JSON objects create a web page that will pull the following JSON objects from your server and display the results on the page.  </h3>
+        <h4>Student Info</h4>
+        <p id="studentID"></p>
+
+        
+    </section>
+
+
+    <script>
+        var studentInfo, x;
+        studentInfo = {
+            "student_id": "900006361",
+            "student_first_name": "Bryan",
+            "student_last_name": "Waters",
+            "student_major": "GRD",
+            "student_credits":"16",
+			"student_gpa" : "3.6",
+			"student_registration_date": "2017-08-14",
+                
+            },
+           
+        x = JSON.stringify(studentInfo);
+        document.getElementById("studentInfo").innerHTML = x;
+
+        // VB6Book
+        
+       
+    </script>
+
+
+
+</body>
+
+</html>

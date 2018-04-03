@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import
+ url('https://fonts.googleapis.com/css?family=Architects+Daughter|Cinzel|Comfortaa|Julee|Lobster+Two|Permanent+Marker|Playfair+Display+SC|Poiret+One|Righteous|Shrikhand');
+/* CSS Document */
+/* Author: Robert McDonell
+	Date: June 6,2017
+*/
+
+
+h1 {
+	font-family: "fredericka-the-great";
+	text-align: center;
+	font-size: 2em;
+	color: limegreen;
+}
+p {
+	color: cornflowerblue;
+}
+h2 {
+	background-color: blueviolet;
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js" 
+
+
+	function validateEmail(email) {  
+  var "re" = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email); //Create a function that uses a regular expression to validate an email address field.
+}
+
+function validate() {
+  $("#result").text("");
+  var email = $("#email").val();
+  if (validateEmail(email)) {
+    $("#result").text(email + " is valid :)");
+    $("#result").css("color", "green");
+  } else {
+    $("#result").text(email + " is not valid :(");
+    $("#result").css("color", "red");
+  }
+  return false;
+}
+
+$("#validate").bind("click", validate);// Create a function that will validate a phone number field.  You may determine the expected format.
+		</script>
+<script src="/vendor/intl-tel-input/build/js/intlTelInput.min.js"></script>
+
+$(document).ready(function() {
+    $('#contactForm')
+        .find('[name="phoneNumber"]')
+            .intlTelInput({
+                utilsScript: '/vendor/intl-tel-input/lib/libphonenumber/build/utils.js',
+                autoPlaceholder: true,
+                preferredCountries: ['fr', 'us', 'gb']
+            });
+
+    $('#contactForm')
+        .formValidation({
+            framework: 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                phoneNumber: {
+                    validators: {
+                        callback: {
+                            message: 'The phone number is not valid',
+                            callback: function(value, validator, $field) {
+                                return value === '' || $field.intlTelInput('isValidNumber');
+                            }
+                        }
+                    }
+                }
+            }
+        })
+        // Revalidate the number when changing the country
+        .on('click', '.country-list', function() {
+            $('#contactForm').formValidation('revalidateField', 'phoneNumber');
+        });
+});
+</script> 
+	
+	<script>function isValidUSZip(sZip) { //Create a function that will validate a zip code field.  You may determine the expected format.
+   return /^\d{5}(-\d{4})?$/.test(sZip);
+}</script>
+	<script>
+up vote
+141
+down vote
+string = string.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g,'_');  //Create a function that will replace the following special characters in a string  ' / < > with "-".
+</script> 
+</head>
+
+<body>
+	<form id="EmailForm" class="form-email">
+    <div class="form-email">
+        <label class="emailValidator">Email</label>
+        <div class="col-xs-51">
+            <input type="email" class="form-email11" name="email" />
+        </div>
+		<form id="contactForm" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Phone number</label>
+        <div class="col-xs-5">
+            <input type="tel" class="form-control" name="phoneNumber" />
+        </div>
+		
+	<form id="ZipCode" class="form-zipCode">
+    <div class="form-zipCode">
+        <label class="zip">Zip Code</label>
+        <div class="col-xs-5email">
+            <input type="text" class="form-zipCode" name="zipCode" />
+        </div>
+    </div>
+</form>
+		
+		
+	
+</body>
+</html>

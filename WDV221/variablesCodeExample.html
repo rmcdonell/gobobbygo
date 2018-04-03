@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Variables and Data Types Example Code</title>
+
+<style>
+
+body {background-color:#FC6;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+</head>
+
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Variables and Data Types - Example Code</h3>
+<hr />
+<p>1. Define a String variable call yourName. Put your name in the variable.</p>
+<script>
+
+	var yourName = "Mark";	//define and assign a variable in the same line.  What is the scope of this variable?
+	
+</script>
+
+
+<p>2. Define a Numeric variable called numberSold with a value of 37.</p>
+<script>
+
+	var numberSold = 37;	//notice there are no quotes.  Quotes would make the value a string instead of a number
+
+</script>
+
+<p>3. Define a Numeric variable called totalSales with a value of 123.45.</p>
+<script>
+
+	var totalSales = 123.45;	//no difference when defining a digital of floating point number
+
+</script>
+
+<p>4. Define a variable called goodMonth. Assign it a boolean value of true.</p>
+<script>
+
+	var goodMonth = true;	//notice no quotes, this makes a boolean VALUE of true or fales. Quotes "true" becomes the word true.
+
+</script>
+
+<p>5 Define a variable called annualSales. Do not assign it a value.</p>
+<script>
+
+	var annualSales;		//created the variable but did not assign a value.  Most likely contains undefined.
+
+</script>
+<p>Create a new script element below this paragraph. In that runtime script output each of the variables using the document.write( ). Each output should be within its own &lt;p&gt; element. Show the exercise number with each output. Your output should look something like this:</p>
+<script>
+
+	document.write("<p>1. Your name is: " + yourName + "</p>");	//join the beginning string with the value of the variable and the ending string into one long string
+	document.write("<p>2. Number Sold: " + numberSold + "</p>");		
+	document.write("<p>3. Total Sals: " + totalSales + "</p>");	
+	document.write("<p>4. Is this a good month? " + goodMonth + "</p>");	
+	document.write("<p>5. Annual Sales: " + annualSales + "</p>");	
+
+</script>
+
+<p>6. Create a function called displayNames( ). Define a String variable called friendsName inside the function. Put one of your friend's name in the variable. The function should use an alert to display the yourName variable defined above. It should then display the friendsName variable within an alert. Note: What is the scope of the friendsName variable?</p>
+<script>
+
+	function displayNames(){
+		var friendsName = "Alan";			//what is the scope of this variable?
+		alert("Your Name is: " + yourName);
+		alert("Your friend is " + friendsName);
+	}//end displayNames()
+
+</script>
+
+<p>7. Use a button with an onclick event to call the displayNames( ) function. </p>
+
+	<p><input type="button" value="Display Names" onClick="displayNames()"/>
+
+<p>8. Create a function called displayFriendsName( ). Use a button to call it. It should use an alert to display the friendsName variable that you defined in the displayNames() function. Will it work correctly? Why or Why not?
+  <script>
+
+	function displayFriendsName(){
+		
+		alert("Your friend's name is " + friendsName);	
+		
+	}
+</script>
+
+	</p>
+<p><input type="button" value="Display Friends" onClick="displayFriendsName()"/>
+<p>9. Create a function called getName( ). Define a variable called inName within the function. Code a prompt within the function that will ask the user for a name. Store the name from the prompt in the inName variable. Use an alert( ) to display the name that was entered. Create a button and use an onclick event to run this function. </p>
+<script>
+
+	function getName(){
+	
+		var inName;		//define a local variable for use within this function
+		
+		inName = prompt("Please enter a name.");
+		
+		alert("You entered " + inName);
+	}
+
+</script>
+	<p><input type="button" value="Enter Name" onClick="getName()"/>
+
+
+<p>10. Create a function that will  accept a string variable and tell you how many characters are in the string.
+<p>&quot;I go to college at DMACC&quot; 
+  <input type="button" name="button" id="button" value="How many?" onClick="characterCounter(string1)">  <!-- passing a parameter when called -->      
+<p>&quot;I am studying Web Development&quot;  
+  <input type="button" name="button2" id="button2" value="How Many?" onClick="characterCounter(string2)">    
+<p>&quot;Javascript is my friend!&quot; 
+    <input type="button" name="button3" id="button3" value="How Many?" onClick="characterCounter(string3)">
+      
+<p>&quot;There is no variable for this string.&quot; 
+	<input type="button" name="button4" id="button4" value="How Many?" onClick="characterCounter('There is no variable for this string')"> 
+<!-- Notice for the last example the string to be evaluated is passed directly into the function instead of using a variable -->    
+         
+<script>
+
+	var string1 = "I go to college at DMACC";		//create a global variable for a string literal
+	var string2 = "I am studying Web Development";	//create a global variable for a string literal
+	var string3 = "Javascript is my friend!";		//Learn to global work with it, don't fight it. 
+	
+	function characterCounter(inString)
+	{
+		//Javascript creates a local scope variable called inString when the function is called.  It assigns the value of whatever is placed
+		//within the ( ) of the function in the variable. 
+		
+		//In the first example Javascrit does something like  var inString = string1  It moves the data stored in string1 variable into the instring variable 
+		
+		//In the last example Javascript does something like  var inString = "There is nor variable for this string";  This is done automatically for you
+		
+		var charCount = inString.length;		//This uses the .length property of the String Object/variable
+		
+		alert("The length of '" + inString + "' is " + charCount + " characters."); 
+	}
+	
+</script>    
+      
+ 
+</body>
+</html>

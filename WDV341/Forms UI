@@ -1,0 +1,171 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <!--
+    	WDV321 UI Form Assignment
+        Author: Robert McDonell
+        Date: 2/05/2018
+    -->
+    <title> UI Form</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        fieldset {
+            border: 5;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 0 0;
+            font-size: 1.2em;
+        }
+
+        label.ui-checkboxradio-label {
+            margin: 0px;
+        }
+
+        legend {
+            display: block;
+            margin: 15px 0 0 0;
+            font-size: 1.2em;
+        }
+
+        .p-form {
+            display: block;
+            margin: 10px 0 0 3px;
+        }
+
+    </style>
+
+    <script>
+
+        $(function() {
+            $("#datepicker").datepicker({ //datepicker
+                numberOfMonths: 4,
+                showButtonPanel: true
+            });
+        });
+
+
+        //Select Menu functions
+        $(function() {
+            $("#location").selectmenu();
+            $("#department").selectmenu();
+            $("#shift").selectmenu().selectmenu("menuWidget").addClass("overflow");
+        });
+
+        //Radio/Checkbox function
+        $(function() {
+            $("input").checkboxradio();
+        });
+
+        //Form Button function
+        $(function() {
+            $(".widget input[type=submit], .widget a, .widget button").button();
+            $("button, input, a").click(function(event) {
+                event.preventDefault();
+            });
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <div id="formContainer">
+        <form action="#" method="post" id="demoForm">
+
+            <fieldset>
+                <legend>Job Application</legend>
+                <label for="location">Select a Store Location:</label>
+                <select name="location" id="location">
+            <option>Altoona</option>
+            <option>Ames</option>
+            <option selected="selected">Ankeny</option>
+            <option>West Des Moines</option>
+        </select>
+
+                <label for="department">Select a Department/Position:</label>
+                <select name="department" id="department">
+            <optgroup label="Clothing">
+                <option value="jquery">Sales Associate</option>
+                <option value="jqueryui">Cashier</option>
+            </optgroup>
+            <optgroup label="Sporting Goods">
+                <option value="jquery">Sales Associate</option>
+                <option value="jqueryui">Cashier</option>
+            </optgroup>
+            <optgroup label="Stock">
+                <option value="earlymorning">Early Morning Recovery</option>
+                <option value="overnight">Overnight Stock</option>
+            </optgroup>
+        </select>
+
+
+
+
+                <legend>Type of Work: </legend>
+                <label for="radio-1">Full Time</label>
+                <input type="radio" name="radio-1" id="radio-1">
+                <label for="radio-2">Part-time</label>
+                <input type="radio" name="radio-1" id="radio-2">
+                <label for="radio-3">Seasonal</label>
+                <input type="radio" name="radio-1" id="radio-3">
+
+
+
+                <legend>Select a Shift: </legend>
+                <label for="radio-4">1st</label>
+                <input type="radio" name="radio-2" id="radio-4">
+                <label for="radio-5">2nd</label>
+                <input type="radio" name="radio-2" id="radio-5">
+                <label for="radio-6">3rd</label>
+                <input type="radio" name="radio-2" id="radio-6">
+
+
+
+                <legend title="Please select which days you are available to work">Availability: </legend>
+                <label for="checkbox-1">Sunday</label>
+                <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                <label for="checkbox-2">Monday</label>
+                <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                <label for="checkbox-3">Tuesday</label>
+                <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                <label for="checkbox-4">Wednesday</label>
+                <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                <label for="checkbox-5">Thursday</label>
+                <input type="checkbox" name="checkbox-5" id="checkbox-5">
+                <label for="checkbox-6">Friday</label>
+                <input type="checkbox" name="checkbox-6" id="checkbox-6">
+                <label for="checkbox-7">Saturday</label>
+                <input type="checkbox" name="checkbox-7" id="checkbox-7">
+
+                <legend>Start Date:</legend>
+                <p class="p-form">Date: <input type="text" id="datepicker" title="Please choose a date you are avaiable to begin work"></p>
+            </fieldset>
+
+
+            <p><input class="ui-button ui-widget ui-corner-all" type="submit" value="Submit">
+            <input class="ui-button ui-widget ui-corner-all" type="reset" value="Reset">
+            </p>
+
+        </form>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

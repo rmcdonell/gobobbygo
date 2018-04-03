@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script>
+        var products = ["pen", "paper", "pencil"]; //look up array
+        var inventory = [0, 0, 0];
+
+        
+        function findProduct() {
+            //alert("Inside");
+            var dropDown = document.getElementById("productList"); //finds our dropdown by ID
+            var inputProduct = dropDown.options[dropDown.selectedIndex].value; //returns  value of selected item in drop down
+            var indexOfProduct = products.indexOf(inputProduct); // returns index value of  selected item
+
+
+            
+            var inventoryInput = parseInt(document.getElementById("inQuantity").value)
+            inventory[indexOfProduct] += inventoryInput;
+
+            alert("You now have " + inventory[indexOfProduct].valueOf() + " " + inputProduct + "(s).");
+            //alert(inventory[1].valueOf()); //test to see if I can get the value of a certain position in the array.
+
+
+        } //end of findProduct()
+
+        
+
+        //Validator 
+
+        function validator(inventoryInput) {
+            var number = document.getElementById("inQuantity").value;
+            if (isNaN(number)) {
+                alert("Please Enter a Number");
+                throw "Please Enter A Number";
+            } 
+            else {
+                number = inventoryInput;
+            }
+        }//end of Validator
+
+
+        
+
+     
+
+
+        function displayInventory() {
+            document.getElementById("inventoryValue1").innerHTML = products[0].valueOf() + " = " + inventory[0].valueOf();
+            document.getElementById("inventoryValue2").innerHTML = products[1].valueOf() + " = " + inventory[1].valueOf();
+            document.getElementById("inventoryValue3").innerHTML = products[2].valueOf() + " = " + inventory[2].valueOf();
+        }
+
+        //End of Display
+    </script>
+
+
+</head>
+
+
+<body>
+<h1>Lookup Array From Dropdown</h1>
+
+<p></p>
+
+<p>
+    <label> Select a Product
+        <select id="productList">
+            <script>
+                for (var x = 0; x < products.length; x++) {
+                    document.write("<option>" + products[x] + "</option>");
+                }
+            </script>
+        </select>
+    </label>
+    <br>
+    <label>Enter Quantity:
+        <input type="text" id="inQuantity">
+    </label>
+    <br>
+    <br>
+    <button onClick="findProduct( validator() )">Add to Inventory</button>
+    <button onClick="displayInventory()">Display Inventory</button>
+</p>
+<p><span id="inventoryValue1"></span></p>
+<p><span id="inventoryValue2"></span></p>
+<p><span id="inventoryValue3"></span></p>
+</body>
+</html>

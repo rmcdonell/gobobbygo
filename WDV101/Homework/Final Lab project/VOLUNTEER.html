@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<!--author: Robert McDonell
+  Date: July 31,2017
+	FINAL PROJECT-->
+<meta charset="utf-8">
+<title>volunteer</title>
+<meta name="description" content="Pets to Go is a nonprofit, no-kill animal shelter serving the Springfield area. Our mission is to give these homeless animals a second chance through our rescue, shelter, and adoption programs. .">
+<meta name="keywords" content="search, engine, submission, optimize, optimise, promote, donate, cats, dogs, adoption">
+<link href="files/FINAL_PROJECT_CSS.css" rel="stylesheet" type="text/css"/>
+
+<link href="files/print_css.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+ 
+	
+	em {
+ color: limegreen;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+#container {
+	width: 40%;
+	margin: 0 auto;
+	border-width: 1px;
+	float: right;
+}
+form {
+	width: auto;
+	margin-top: 1em;
+	border: solid 2px navy;
+	padding: 1em;
+	font-size: 16px;
+}
+fieldset {
+	background-color: bisque;
+	margin-bottom: 1em;
+	border: solid 2px #305704;
+	display: block;
+	text-align: justify;
+}
+label {
+	width: 150px;
+	margin-right: 15px;
+	color: #343434;
+	text-align: right;
+}
+img {
+	display: block;
+	margin: 0 auto;
+}
+legend {
+	font-weight: bold;
+	padding: 0 10px;
+}
+fieldset.group {
+	float: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+label {
+	display: block;
+	float: left;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<header>
+  <div class="primary_header">
+    <h1 class="title"> Pets to Go</h1>
+  </div>
+  <nav class="secondary_header" id="menu">
+    <ul>
+      <li><a href="index.html">HOME PAGE</a></li>
+      <li><a href="AboutPTG.html">ABOUT/CONTACT</a></li>
+      <li><a href="DONATIONS.html">DONATIONS</a></li>
+      <li><a href="VOLUNTEER.html">VOLUNTEER</a></li>
+      <li><a href="ADOPTION.html">ADOPT</a></li>
+      <li><a href="SERVICES.html">SERVICES</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<h2 class="noDisplay">Main Content</h2>
+<article class="left_article">
+  <h3>VOLUNTEER</h3>
+  <p><strong>We can always use a hand!</strong> You can help by caring for our homeless cats and dogs, keeping the shelter clean, helping us raise funds, or fostering pets. Find out about becoming a <em>Pets to Go </em>volunteer</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-hB8YDQ1rDI" frameborder="0" allowfullscreen></iframe>
+  </article>
+  </div>
+
+<section id="container">
+<p><img src="images/SIGN_UP.jpg" alt="sign up" width="400" height="100" /></p>
+<div id="formcontainer">
+<form name="form1" id="form1" method="post" action="files/formEmailer.php">
+
+<!-- enter your forms code below -->
+<fieldset>
+  <legend><em>Personal Information</em></legend>
+  <label for="firstname">First Name</label>
+  <input type="text" name="firstname" id="firstname" size="20"/>
+  <br>
+  <label for="lastname">Last Name </label>
+  <input form="text" name="lastname" id="lastname" size="20"/>
+</fieldset>
+<fieldset>
+  <legend><em>Email</em></legend>
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" size="20" class="text"/>
+  <br>
+  <label for="password"> Enter a Password</label>
+  <input type="password" name="pass" id="pass" size="15"/>
+  <br>
+  <label for="password">Reenter a Password</label>
+  <input type="password" name="pass1" id="pass1" size="15"/>
+  <br>
+</fieldset>
+<fieldset>
+  <legend><em>Gender</em></legend>
+  <input type="radio" name="gender"   id="male"  checked="checked"/>
+  <label for="male">Male</label>
+  <br>
+  <input type="radio" name="gender" id="female" value="female"/>
+  <label for="female">Female</label>
+</fieldset>
+<fieldset>
+  <legend><em>Volunteer Interests</em></legend>
+  <input type="checkbox" name="clean" id="clean" value="clean"/>
+  <label for="clean">Pet Clean-up</label>
+  <br>
+  <input type="checkbox" name="reg" id="reg" value="reg"/>
+  <label for="reg">Registration</label>
+  <br>
+  <input type="checkbox" name="exer" id="exer" value="exer"/>
+  <label for="exer">Pet Exercise</label>
+  <br>
+  <input type="checkbox" name="groom" id="groom" value="groom"/>
+  <label for="groom">Grooming</label>
+  <br>
+  <input type="checkbox" name="other" id="other" value="other" checked="checked"/>
+  <label for="other">Other</label>
+  <br>
+</fieldset>
+<fieldset>
+  <legend><em>Skills</em></legend>
+  <label for="select">Select</label>
+  <select name="select" id="select">
+    <option value="pethandle">Pet handling</option>
+    <option value="computer">Computer</option>
+    <option value="retail">Retail</option>
+    <option value="Management">Management</option>
+    <option value="Other" select="selected">Other</option>
+  </select>
+</fieldset>
+<fieldset>
+  <legend><em>Questions/Comments</em></legend>
+  <textarea name="message" id="message" rows="10" cols="45"></textarea>
+  <br>
+  <input type="submit">
+  <input type="reset">
+</fieldset>
+	</form>
+	</div>	
+</section>
+<div id="footer">
+  <footer class="secondary_header footer">
+    <div class="copyright">&copy;2017 - <strong><em>Pets To Go </em> Animal Shelter
+      3183 S Veterans Pkwy
+      Springfield, Illinois 62704
+      
+      (217) 698-3091</strong></div>
+    <br>
+    <br>
+    <a href="mailto:www.gobobbygo.com">Email us</a>
+    
+     </footer>
+    
+</div>
+	
+</body>
+</html>

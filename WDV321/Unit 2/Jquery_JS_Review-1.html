@@ -1,0 +1,127 @@
+
+<!doctype HTML>
+<html lang="en">
+<head>
+	<!--
+    	WDV321 
+        Author: Robert McDonell
+        Date: 1/23/2018
+    -->
+<title>jsReview.html</title>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script>
+
+var teams = ["Patriots", "49ers", "Hawkeyes"];
+
+var d = new Date();
+    
+   $(document).ready(function() //JQUERY function
+        
+     {
+         //alert("test");
+	   
+	   
+         $.each(teams, function(index,value)  //JQuery for Teams
+             {
+                  $("#pList").append("team" + " "+ (index+1) + ": " + value + "<br>"); 
+             }
+        
+         );
+		
+    }
+    );
+	    
+</script>
+
+</head>
+	
+	
+
+<body>
+	
+	<h3>Date</h3>
+	<p>Today's date is: <br> <span id="date"></span></p>
+	<br>
+    <script>
+		
+        $("#date").html(d.toDateString()); //JQuery date function
+		
+    </script>
+	
+
+	<h3>Form </h3>
+	<form id="form1" name="form1">  
+
+		<p>
+			Please select:
+			<select name="price" id="price">
+				
+				<option value = "10">$10.00</option>
+				<option value = "20">$20.00</option>
+				<option value = "30">$30.00</option>
+				<option value = "40">$40.00</option>
+				<option value = "50">$50.00</option>
+				
+			</select>
+		</p>
+	
+		<p>
+			Please select a quantity:
+			<select name="quantity" id="quantity">
+				
+				<option value = "1">1</option>
+				<option value = "2">2</option>
+				<option value = "3">3</option>
+				<option value = "4">4</option>
+				<option value = "5">5</option>
+				
+			</select>
+		</p>
+	
+		<input type="button" id="calculatePrice" name="calculatePrice" value="Calculate Price">
+		<p>
+			The total will be: <span id="totalPrice">$0.00</span>
+		</p>
+        
+        <script>
+            $("#calculatePrice").click(function()
+                {
+		          var p = $("#price").val();
+		          var q = $("#quantity").val();
+		
+		          var totalPrice = p*q;
+		          var formattedPrice = (new Intl.NumberFormat('USD', { style: 'currency', currency: 'USD' }).format(totalPrice));
+		          $("#totalPrice").html(formattedPrice);
+	            }
+            );
+            
+        </script>
+	
+		<input type="reset" id="resetForm1" name="resetForm1" value="Reset Price">
+        
+        <script>
+			
+            $("#resetForm1").click(function()
+                {
+                    $("#totalPrice").html("$0.00");
+                }
+            )
+			
+        </script>
+	
+	</form>
+	<br>
+	
+	<h3>Array </h3>
+    <p id="pList"></p>
+	<br>
+
+	
+	
+
+
+</body>
+
+</html>

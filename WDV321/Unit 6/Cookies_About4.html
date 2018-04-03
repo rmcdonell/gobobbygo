@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Cookie Web</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready( function(){
+var countCookie = getCookie("HomeVisitCont=");
+var prevPageCookie = sessionStorage['prevPageName'];
+var authCookie = getCookie("AuthCookie=");
+
+$(".btnClear").click(function () {
+var expires = new Date();
+var time = expires.getTime();
+time += 1;
+expires.setTime(time);
+
+document.cookie = "HomeVisitCont=; expires=" + expires.toUTCString() + "; path=/";
+document.cookie = "AuthCookie=; expires=" + expires.toUTCString() + "; path=/";
+sessionStorage['prevPageName'] = "";
+alert("All cookie cleared!");
+alert("Authentication not set!");
+window.location = "./home.html"
+});
+
+if (typeof(authCookie) == "undefined" || authCookie == "")
+{
+alert("Authentication not set!");
+window.location = "./home.html"
+}
+else
+{
+$(".content").html("<p>Home page visit count is " + countCookie + " <br/> Previous page that recorded in Home page is " + prevPageCookie + " </p>");
+}
+
+});
+
+function getCookie(name)
+{
+var ca = document.cookie.split(';');
+
+for(var i=0;i < ca.length;i++) {
+var c = ca[i];
+while (c.charAt(0)==' ') {
+c = c.substring(1,c.length);
+}
+if (c.indexOf(name) == 0) {
+return c.substring(name.length,c.length);
+}
+}
+}
+
+</script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">Cookie</a>
+</div>
+<ul class="nav navbar-nav">
+<li><a href="home.html">Home</a></li>
+<li class="active"><a href="#">About</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="container">
+<button class="btnClear" >Create All Cookie</button>
+<br/>
+<div class="content"></div>
+</div>
+
+</body>
+
+</html>

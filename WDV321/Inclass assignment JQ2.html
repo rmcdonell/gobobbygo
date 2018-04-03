@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src="JQUERY ASS/jquery-3.2.1 (1).js">jQuery</script>
+	<script>
+$(document).ready(function(){
+   $("#button").click(function(){
+       var x=  $("#inputName").val();
+	  $("#inReturn").append(x); 
+	   
+    });
+});
+	</script>
+</head>
+
+<body>
+<p>WDV321 Advanced Javascript</p>
+<p>Input Processing </p>
+<form name="form1" method="post" action="">
+  <p>Name: 
+    <label for="inputName"></label>
+  <input type="text" name="inputName" id="inputName">
+  </p>
+  <p>
+    <input type="button" name="button" id="button" value="Submit">
+    <input type="reset" name="button2" id="button2" value="Reset">
+  </p>
+	<script>
+		
+
+	
+
+	</script>
+	
+	
+</form>
+	<p>You Entered:<span id="inReturn"></span> </p>
+	
+<p>&nbsp;</p>
+</body>
+</html>

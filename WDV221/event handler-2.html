@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>event handler</title>
+</head>
+
+<body>
+
+<h1>Event Handlers allow interaction from the user</h1>
+
+<h2>onclick Event handlers</h2>
+<script>
+function inform(){
+    alert("See I Work! You have activated me by clicking the grey button!")
+}
+</script>
+ 
+<form>
+<input type="button" name="test" value="Click me" onclick="inform()">
+</form>
+<form name="go">
+<input type="radio" name="C1" onclick="document.bgColor='lightblue'">
+<input type="radio" name="C2" onclick="document.bgColor='lightyellow'">
+<input type="radio" name="C3" onclick="document.bgColor='lightgreen'"/><font face="Courier New">>
+</form></font>
+
+<h2>onmouseover Event handlers</h2>
+
+<a href="blabla.htm" onmouseover="status='DHTML code library!';return true" onmouseout="status=' '">Dynamic Drive</a>
+<h2>onmouseout Event Handler</h2>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/JavaScript.jpg" alt="Smiley" width="32" height="32">
+
+<p>The function bigImg() is triggered when the user mouse over the image. This function enlarges the image.</p>
+<p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That function sets the height and width of the image back to normal.</p>
+<h2>onchange Event Handler</h2>
+<p>Select a color from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Blue">Blue
+  <option value="Green">Green
+  <option value="Red">Red
+  <option value="Yellow">Yellow
+</select>
+
+<p>When you select a new <strong>Color</strong>, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+
+
+<h2>onload Event Handler</h2>
+<img src="images/JavaScript.jpg" onload="inform()"> //Execution of code will begin after the image has loaded.
+<button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+
+
+</body>
+</html>

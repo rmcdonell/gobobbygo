@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+	Classic Taxi
+	Layout Style Sheet
+
+	Author: Robert McDonell
+*/
+
+/* Body */
+
+body {
+	background-color: white;
+	font-family: Veranda, Geneva, Ariel, Helvetica, sans-serif;
+}
+
+/* links*/
+a {
+	color: orange;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+
+/*heading styles*/
+
+h1 {
+		background-color: orange;
+		color: black;
+		font-size: 2.5em;
+		letter-spacing: .2em;
+		text-align: center;
+		text-transform: uppercase;
+		word-spacing: .5em;
+	}
+
+h2 {
+		background-color: chocolate;
+		color: white;
+		
+}
+
+/* paragraph*/
+
+p {
+	color: saddlebrown;
+	line-height: 1.5em;
+	text-indent: 3em;
+}
+
+/*footer*/
+
+footer {
+	
+	color: saddlebrown;
+	background-color: palegoldenrod;
+	font-size: .7em;
+	text-align: center;
+}

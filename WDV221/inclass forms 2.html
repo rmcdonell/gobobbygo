@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>in class</title>
+	
+<script>
+	
+	function showDiscount(inAmount)
+	{
+		
+		
+		
+		if(document.getElementById("discount").checked);
+		   {
+		   alert("You Qualigy for a Discount!");
+		   }
+	
+	}
+		
+	
+	function showProduct
+		
+	{
+		if (document.getElementById("Pens").checked);
+		{
+			alert("You chose Pens");
+		}
+		if (document.getElementById("Paper").checked);
+		{
+			alert("You chose Paper");
+		}
+		
+		if (document.getElementById("Pencils").checked);
+		{
+			alert("You chose Pencils");
+		}
+	
+		function showState(){alert("inside showState()");
+		var stateList= document.getElementById("stateTax");
+		alert(statelist.options[statelist.selectedIndex].text);
+		}
+		function showSalesTax()
+		{
+			alert("The sales tax is " + document.getElementById("stateTax").value);
+		}
+		
+	
+	</script>
+</head>
+
+<body>
+	<p>I qualify for a discount</p>
+	<input type="checkbox" name="discount" id="discountButton">
+	<p>Select your product</p>
+	<p>
+  <label>Pens: 
+    <input type="radio" name="Writing" id="pens" value="pens" onClick="showProducts()">
+  </label>
+</p>
+<p>
+  <label>Paper:
+    <input type="radio" name="Writing" id="Paper" value="Paper" onClick="showProducts()">
+  </label>
+</p>
+<p><label>Pencils:
+  	<input type="radio" name="Writing" id="Pencils" value="Pencils" onClick="showProducts()">
+  </label>
+</p>
+<p>
+	<h2>Clickable Dropdown</h2>
+<p>Click on the button to open the dropdown menu.</p>
+
+ 
+  <h1>Please select a State</h1>
+  <fieldset>
+  <select id = "stateList">
+   <option value = ".06">Illinois</option>
+   <option value = ".07">Iowa</option>
+   <option value = ".06">Misourri</option>
+  </select>
+  <input type = "button"
+    value = "change color"
+    onclick = "changeColor()" />
+  </fieldset>
+ 
+	<p></p>
+	<input type="button" name="submit" id="submit" value="submit" onClick="">
+	<p></p>
+	
+	<input type="button" name="button2" id="discount" value="discount" onClick="">
+	<p></p>
+	<input type="button" name="button3" id="Show Product" value="Show Product" onClick="">
+	<p></p>
+	<input type="button" name="button4" id="State" value="State"
+	onClick="">
+	<p></p>
+	<input type="button" name="button5" id="Show Sales Tax" value="Sales Tax" onClick="">
+							 
+</html>

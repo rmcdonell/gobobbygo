@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+	<!--author: Robert McDonell
+  Date: July 31,2017
+	FINAL PROJECT-->
+	<meta charset="utf-8">
+	<title>DONATIONS</title>
+	<meta name="description" content="Pets to Go is a nonprofit, no-kill animal shelter serving the Springfield area. Our mission is to give these homeless animals a second chance through our rescue, shelter, and adoption programs. .">
+	<meta name="keywords" content="search, engine, submission, optimize, optimise, promote, donate, cats, dogs, adoption">
+	<link href="files/FINAL_PROJECT_CSS.css" rel="stylesheet" type="text/css"/>
+	<link href="files/print_css.css" rel="stylesheet" type="text/css" media="print"/>
+ <style type="text/css">
+	 em {
+ color: limegreen;
+}
+#container {
+	width: 1000px;;
+}
+		fieldset {
+	background-color: bisque;
+	margin-bottom: 1em;
+	border: solid 2px #305704;
+	display: block;
+	text-align: justify;
+		}
+		
+		fieldset.group {
+	float: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+iframe {
+	align-content: center;
+}
+header {
+	width: 100%;
+}
+		.right_article{
+			width: 550px;
+			background-color: bisque;
+	margin-bottom: 1em;
+	
+	display: block;
+	text-align: justify;
+		}
+label {
+	display: block;
+	float: left;
+	width: 10em;
+	text-align: right;
+	margin-right: .5em;
+}
+#nkshelter {
+	background-color: silver;
+	border: lime 2px solid;
+	text-align: center;
+}
+</style>
+	</head>
+	<body>
+<div class="container">
+      <header>
+    <div class="primary_header">
+          <h1 class="title"> Pets to Go</h1>
+        </div>
+    <!--Begin menu-->
+    <nav class="secondary_header" id="menu">
+          <ul>
+        <li><a href="index.html">HOME PAGE</a></li>
+        <li><a href="AboutPTG.html">ABOUT/CONTACT</a></li>
+        <li><a href="DONATIONS.html">DONATIONS</a></li>
+        <li><a href="VOLUNTEER.html">VOLUNTEER</a></li>
+        <li><a href="ADOPTION.html">ADOPT</a></li>
+        <li><a href="SERVICES.html">SERVICES</a></li>
+      </ul>
+        </nav>
+  </header>
+      <section>
+    <h2 class="noDisplay">Main Content</h2>
+    <article class="left_article">
+          <h3>Our Pets are Looking for Someone Like You</h3>
+          <p>Because of tough economic times, fewer people can afford to keep their pets. So the number of homeless animals in and around Springfield is increasing dramatically.</p>
+          <!-- begin gif-->
+          <iframe src="https://giphy.com/embed/26FPFjeTKVDuHYyK4" width="780" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          
+          <br>
+          <div id="nkshelter">
+        <h3>No-kill Shelter statistics</h3>
+        <p> <a href="http://www.statisticbrain.com/animal-shelter-statistics/">www.statisticbran.com</a> <br>
+              <a href="https://www.animalhumanesociety.org/about/annual-report-0">www.animalhumanesociety.org</a></p>
+      </div>
+        </article>
+  </section>
+    </div>
+<aside class="right_article">
+     
+      <p><em>How much would you like to donate?</em></p>
+      <form name="form1" id="form1" method="post" action="files/formEmailer.php">
+      <fieldset>
+    <select name="donations" form="myForm">
+           
+          <option value ="none">Nothing</option>
+          <option value ="10">$10.00</option>
+          <option value ="20">$20.00</option>
+          <option value ="30">$30.00</option>
+          <option value ="40">$40.00</option>
+          <option value ="50">$50.00 or more</option>
+        </select>
+        </fieldset>
+	
+    <fieldset>
+          <legend><em>Personal Information</em></legend>
+          <label for="firstname">First Name</label>
+          <input type="text" name="firstname" id="firstname" size="20"/>
+          <br>
+          <label for="lastname">Last Name </label>
+          <input form="text" name="lastname" id="lastname" size="20"/>
+          <br>
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" size="20"/>
+          <br>
+          <label for="address2">Address 2</label>
+          <input form="text" name="address2" id="address2" size="20"/>
+          <br>
+          <label for="state">State</label>
+          <select name="state" form="myForm">
+        <option value ="IA">IA</option>
+        <option value ="NE">NE</option>
+        <option value ="AK">AK</option>
+        <option value ="MN">MN</option>
+      </select>
+          <br>
+          <label for="zip">Zip</label>
+          <input form="text" name="zip" id="zip" size="5"/>
+        </fieldset>
+    <fieldset>
+          <legend><em>Email</em></legend>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" size="30" class="text"/>
+          <br>
+        </fieldset>
+  
+      <fieldset>
+    <form action="http://www.html.am/html-codes/forms/html-form-tag-action.cfm" target="result3" method="post" id="myForm">
+          <p>
+        <input type="submit" value="Submit">
+        <input type="reset">
+      </p>
+        </form>
+  </fieldset>
+      <fieldset>
+    <legend>Send a Message</legend>
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="10" cols="45"></textarea>
+  </fieldset>
+   </form>
+    </aside>
+<div id="footer">
+      <footer class="secondary_header footer">
+    <div class="copyright">&copy;2017 - <strong><em>Pets To Go </em> Animal Shelter
+      3183 S Veterans Pkwy
+      Springfield, Illinois 62704
+      
+      (217) 698-3091</strong></div>
+    <br>
+    <br>
+    <a href="mailto:www.gobobbygo.com">Email us</a> </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WDV221 Intro Javascript - Calculations and Textfields</title>
+
+    <style>
+
+        body {
+            background-image: url("images/page_bg.jpg");
+        }
+
+        #container {
+            text-align: center;
+            border: 2px solid black;
+            width: 40%;
+            border-radius: 15px;
+            box-shadow: 5px 5px 3px #000;
+            margin: 0 auto;
+            background-image: url("images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        #container img {
+            border: 5px solid black;
+            box-shadow: 2px 2px 3px #646464;
+
+            width: 100%;
+        }
+
+        #bankStatement {
+            border-radius: 15px;
+            padding: px;
+            background-image: url("images/deposit_background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            width: 60%;
+            margin: 0 auto;
+            box-shadow: 2px 2px 3px #646464;
+        }
+
+        #bankStatement p {
+            color: black;
+            font-size: 1em;
+        }
+
+        #innerBankStatement {
+            width: 85%;
+            background-color: white;
+            font-weight: bolder;
+            border-radius: 10px;
+            color: black;
+            padding: 0 5px;
+            text-align: left;
+            font-size: 2em;
+            margin: 0 auto;
+        }
+
+        #displayBalance {
+            text-align: center;
+        }
+
+        #deposit1,
+        #withdraw1,
+        #reset1 {
+            text-align: center;
+            padding: 5px;
+            margin: 0 20px;
+            box-shadow: 2px 2px 3px #646464;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+
+        #deposit1:hover,
+        #withdraw1:hover,
+        #reset1:hover {
+            color: #646464;
+            box-shadow: none;
+        }
+
+        form {
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 70%;
+            margin: 10px auto;
+            text-align: center;
+            background-image: url("images/black.png");
+        }
+
+        form p {
+            font-weight: bold;
+            font-size: 1.25em;
+            color: white;
+        }
+
+    </style>
+
+    <script>
+        var accountBalance = 0;
+
+        // Formatting
+
+        function testFormat(inNum) {
+            //alert("inside testFormat()");
+            if (isNaN(inNum)) {
+                //alert("result of isNaN" );   //The input amount is a non numeric string. It is or contains letters and/or spaces
+                return false;
+            }
+            else {
+                inNum = parseFloat(inNum);		//Convert input value into a floating point number.  toFixed() requires a number value to work with
+                return '$' + inNum.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+            }
+        }
+
+
+        function validator() {
+            var number = document.getElementById("inAmt").value;
+            if (isNaN(number)) {
+                alert("Please Enter a Number");
+                throw "Please Enter A Number";
+            } //if
+            else {
+                number = accountBalance;
+            }//else
+        }//function
+
+        // Money Input Types
+
+        function deposit() {
+
+            accountBalance = parseFloat(document.getElementById("inAmt").value) + accountBalance;
+            document.getElementById("displayBalance").innerHTML = testFormat(accountBalance);
+
+            if (accountBalance === 0) {
+                document.getElementById("displayBalance").style.color = "black";
+            }
+            else {
+                if (accountBalance > 0) {
+                    document.getElementById("displayBalance").style.color = "green";
+                }
+                else {
+                    document.getElementById("displayBalance").style.color = "red";
+                }
+            }
+
+        }
+
+
+        function withdraw() {
+            accountBalance = accountBalance - parseFloat(document.getElementById("inAmt").value);
+            document.getElementById("displayBalance").innerHTML = testFormat(accountBalance);
+            if (accountBalance === 0) {
+                document.getElementById("displayBalance").style.color = "black";
+            }
+            else {
+                if (accountBalance > 0) {
+                    document.getElementById("displayBalance").style.color = "green";
+                }
+                else {
+                    document.getElementById("displayBalance").style.color = "red";
+                }
+            }
+        }
+
+        // Restart Application
+        function resetAccount() {
+            accountBalance = 0;
+            document.getElementById("displayBalance").innerHTML = "";
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+<div id="container">
+    
+    <br>
+    <br>
+    <br>
+    <form id="form2" name="form2" method="post" action="">
+        <p>
+            Enter Amount:
+            <input type="text" name="inAmt" id="inAmt"/>
+        </p>
+        <p>
+            <input type="button" name="button3" id="deposit1" value="Deposit" onClick="deposit(validator())"/>
+            <input type="button" name="button4" id="withdraw1" value="Withdraw" onClick="withdraw(validator())"/>
+        </p>
+
+        <div id="bankStatement">
+            <div id="innerBankStatement">
+                <p>Balance: <span id="displayBalance"></span>
+                </p>
+            </div> <!-- end inner bank statement -->
+        </div> <!-- end bank statement -->
+        <p>
+            <input type="reset" name="button2" id="reset1" value="Reset" onClick="resetAccount()"/>
+        </p>
+    </form>
+    <br>
+    <br>
+    <br>
+
+</div> <!-- end container -->
+
+</body>
+</html>

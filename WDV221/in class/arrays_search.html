@@ -1,0 +1,72 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script>
+
+var names = ["Jeff", "Mary", "Mark"];
+
+var cities = ["Des Moines", "Chicago", "Tokyo"];
+
+var population = [350000, 7000000, 21000000];
+
+var scores = [];  // create an empty array
+
+//alert(names);
+names[3] = "Lisa"; //add a fourth row
+//alert(names);
+//names[75] = "Who";
+//alert(names);
+
+//alert(names[1]);
+
+
+function lookupName(inName) //inName is a parameter
+{
+	//alert("inside lookupName()");
+	var foundName = false; //flag
+	
+	for(var x=0; x < names.length; x++) 
+	{
+		if( names[x] == inName)
+		{
+			var foundName = true; //set found to true
+			break; //stops for the loop
+		}//end if statement
+
+	}//end of for loop - lookup loop
+	
+			if(foundName)
+		{
+			alert("Found the Name");
+		}
+		else{
+			alert("Name not found");
+		}//end if statement
+		
+} //end of lookupName()
+
+
+
+
+</script>
+</head>
+
+<body>
+<h2>Arrays Class Examples </h2>
+<p>&nbsp;</p>
+
+
+<p><button onClick="lookupName('Jill')">Find Jill</button></p>
+<p><button onClick="lookupName('Mark')">Find Mark</button></p>
+
+
+
+<p>When I click the button it will call a function. The function will look through the list of names to see if Jill is ont he list. If Jill is ont eh list it will display "Found the Name." If the name is not on the list function will display "Name Not Found."
+</p>
+
+</body>
+</html>

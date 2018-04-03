@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <style type="text/css">
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <h1>WDV321 Advanced Javascript</h1>
+    <h2>AJAX Team Project</h2>
+    <h3>Team Members: </h3>
+    <p>&nbsp;</p>
+    <form name="form1" method="post" action="">
+        <h2>TRICK OR TREAT!!!</h2>
+        <p>
+            Make your choice:
+            <label>
+                <select name="select" id="select">
+                    <option value="CupcakeChocolate.js">Vanilla Cupcake</option>
+                    <option value="CupcakeRed.js">Chocolate Cupcake</option>
+                    <option value="CupcakeVan.js">Red Velvet Cupcake</option>
+                </select>
+            </label>
+        </p>
+        <p id="desc">Description:</p>
+        <p id="price">Price:</p>
+        <p id="img">Image</p>
+        <p>
+            <input type="button" name="button" id="button" value="Submit">
+            <input type="button" name="button2" id="button2" value="Submit">
+        </p>
+    </form>
+    <p class="bold">Extra Credit:</p>
+    <p>Use an Ajax call to dynamically change the select to a choice of candy instead of cupcakes. Include the appropriate server side information. </p>
+
+    <script>
+        function setCupcake(fileLoc) {
+            $.getJSON(fileLoc, function (data) {
+                cupcake = data;
+                $("#desc").html(cupcake["description"]);
+                $("#price").html("$" + cupcake["price"]);
+                $("#img").html(cupcake["image"]);
+            });
+        }
+
+        $(document).ready(function () {
+            setCupcake($("select").val());
+
+            $("select").on('change', function () {
+                
+                setCupcake(this.value);
+                    
+            })
+                    
+
+
+        });
+    </script>
+</body>
+</html>

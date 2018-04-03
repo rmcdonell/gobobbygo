@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Structure Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+           //Creating button interaction
+
+        $("#showDiv2").click(function() { //button click
+          $("#div2").css("visibility", "visible"); //to make the css visible
+            });
+		$("#hideDiv2").click(function() {  //button click
+          $("#div2").css("visibility", "hidden"); //to make the css hidden
+            });
+
+        $("#addDiv1").click(function() { //button click
+          $("#div1").show(); //to make the css show
+            });
+		$("#removeDiv1").click(function() { //button click
+             $("#div1").hide(); //to make the css hidden
+            });
+
+        });
+
+    </script>
+
+
+    <style>
+        #div1 {
+            background-color: blue;
+        }
+
+        #div2 {
+            background-color: green;
+        }
+
+        #div3 {
+            background-color: red;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1>WDV321 Advanced Javascript</h1>
+    <h2>Dynamic Page Structure</h2>
+
+    <div id="div1">
+        <h3>Division 1</h3>
+    </div>
+
+    <div id="div2">
+        <h3>Division 2</h3>
+    </div>
+
+    <div id="div3">
+        <h3>Division 3</h3>
+    </div>
+
+    <p>This example should use the CSS visibility property and JQuery.
+        <input name="" type="button" value="Hide Division 2" id="hideDiv2">
+        <input name="" type="button" value="Show Division 2" id="showDiv2">
+    </p>
+
+    <p>This example should use the CSS visibility property and JQuery.
+        <input name="" type="button" value="Remove Division 1" id="removeDiv1">
+        <input name="" type="button" value="Add Division 1" id="addDiv1">
+    </p>
+
+
+</body>
+
+</html>

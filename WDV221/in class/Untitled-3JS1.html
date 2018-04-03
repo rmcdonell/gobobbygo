@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Introduction to Javascript</title>
+
+<style>
+
+body {background-color:#FFCCCC;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+</style>
+
+<script>
+
+	function displayCourse(){	
+		alert("You are in WDV221 Intro Javascript at DMACC");
+	}//end displayCourse()
+
+
+	function writeCourseName(){
+		document.write("<h1>WDV221 Intro Javacript</h1>");		
+	}//end writeCourseName()
+
+
+</script>
+
+
+
+</head>
+
+<body>
+<script> writeCourseName();		//What happened here? </script>
+<h3>Introduction to Javascript - Javascript Coding Examples</h3>
+<hr />
+<p>For each exercise use a comment line to put the Exercise number within the script. Also place a short description of what the script is doing.</p>
+<p>1. Create a runtime script that will process an alert( ). The alert should display your name. </p>
+
+<script>
+
+	alert("My name is Marko");	//this is the same as using windows.alert("My name is Marko");
+
+</script>
+
+<p>2. Create a runtime script that will process a document.write( ). The script should write your name below as an H1 element. </p>
+
+<script>
+
+	document.write("<h1>Hello Marko</h1>");
+
+</script>
+
+<p>3. Create a runtime script that will process a document.write( ). The script should write a short description of what you have learned today below this line.  The content should be within a p element.</p>
+
+<script>
+
+	document.write("<p>I learned that a runtime script will process where it is located on a web page.</p>");
+
+</script>
+
+<p>4. Create a function called displayCourse(). The function will call the alert method to display the course name. Use a runtime script to call the function just below this paragraph.</p>
+
+<script>
+
+	displayCourse();	//notice that using the name of the function in a script element tells the browser to run the code of that function at this point
+
+</script> 
+
+
+<p>5. Use a button element to call the displayCourse()function. Add the onclick event handler to the button in order to call the function. </p>
+
+<p> <input type="button" value="Display Course" onClick="displayCourse()" /> Notice that you can call this multiple times. </p>
+
+
+<p onClick="writeCourseName()">6. Create a function called writeCourseName().  The function should use the document.write() command to display the course name as an H1 element. Place an onclick event handler in this paragraph. When you CLICK THIS PARAGRAPH it will call the writeCourseName() function.  Be prepared to discuss what happened.</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

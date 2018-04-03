@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document 
+Author: Robert McDOnell
+Date:June 20, 2017 */
+
+heading{
+	text-align: center;
+	background-color: lime;
+	
+}
+img{
+	vertical-align: middle;
+}
+	
+
+
+h1{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+ul{
+	list-style-type: square;
+}
+em{
+	color: limegreen;
+}
+strong{
+	color: lime
+}
+
+footer{
+	text-align: center;
+	background-color: burlywood;
+	
+}
+	
+header{
+	text-align: center;
+	color: limegreen;
+	background-color: antiquewhite;
+}
+	
