@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Angular</title>
+</head>
+
+<body>
+<p>WDV341 Intro PHP</p>
+<p>Survey Form</p>
+<form name="form1" method="post" action="">
+  <fieldset>
+      <p>
+        <label>Email:
+          <input type="text" name="cust_email" id="cust_email">
+        </label>
+      </p>
+      <p>Please rate the following times from best (1) to worst (4)</p>
+      <p>
+    <select id="option1" [(ngModel)]="option1" (ngModelChange)="recurringSelections1($event)" name="option1">
+            <option *ngFor = "let scale of scales" [hidden] = "scale.select === true">{{scale.name}}</option>
+    </select>
+    Monday/Wednesday 10:10am-Noon
+      </p>
+      <p>
+      <select id="option2" [(ngModel)]="option2" (ngModelChange)="recurringSelections2($event)" name="option2">
+            <ng-container *ngFor = "let scale of scales">
+              <option [hidden] = "scale.select === true">{{scale.name}}</option>
+            </ng-container>
+      </select>
+      Tuesday 6:00pm-9:00pm
+      </p>
+      <p>
+        <select id="option3" [(ngModel)]="option3" (ngModelChange)="recurringSelections3($event)" name="option3">
+            <ng-container *ngFor = "let scale of scales">
+              <option [hidden] = "scale.select === true">{{scale.name}}</option>
+            </ng-container>
+      </select>
+      Wednesday 6:00pm-9:00pm
+      </p>
+      <p>
+        <select id="option4" [(ngModel)]="option4" (ngModelChange)="recurringSelections4($event)" name="option4">
+            <ng-container *ngFor = "let scale of scales">
+              <option [hidden] = "scale.select === true">{{scale.name}}</option>
+            </ng-container>
+      </select>
+      Tuesday/Thursday 10:10am-Noon
+      </p>
+      <p>
+        <input type="submit" name="button" id="button" value="Submit">
+        <button class="btn btn-secondary" (click)="fixPageByReset()">
+          Reset
+        </button>
+      </p>
+  </fieldset>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
+ 
